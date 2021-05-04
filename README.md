@@ -16,7 +16,7 @@
   * Values
   * Opportunities after
 - [ ] Connect my CV
-- [ ] Decide Sections
+- [x] Decide Sections
 - [ ] Write text
 
 #### Functionality
@@ -46,29 +46,29 @@
 
 ### Code
 
-- [ ] HTML
-  - [ ] Basics
-    - [ ] Head
-    - [ ] Header: title, nav, nav-links
-    - [ ] Sections: Set up
-    - [ ] Footer
+- [ ] **HTML**
+  - [x] *Basics*
+    - [x] Head
+    - [x] Header: title, nav, nav-links
+    - [x] Sections: Set up
+    - [x] Footer
   - [ ] Insert text
   - [ ] Beethoven -> Form elements: select, button
-- [ ] CSS
+- [ ] **CSS**
   - [ ] make variable & class names
-  - [ ] OK Layout:
+  - [ ] *OK Layout:*
     - [ ] Basic page structure
     - [ ] Alignment, gaps
     - [ ] Sizes
     - [ ] Style DOM-Placeholder
     - [ ] Responsive?
     - [ ] Tidy up
-  - [ ] Design:
+  - [ ] *Design:*
     - [ ] Font families, sizes
     - [ ] Special text, span
     - [ ] Colours: palettes, relative
     - [ ] Tidy up
-- [ ] JavaScript
+- [ ] **JavaScript**
   - [ ] Set up object: Symphony-No, Movement-No, Key-signature, imslp-link
   - [ ] js variables, functions
   - [ ] Access HTML-elements
@@ -81,22 +81,22 @@
 
 ### Test
 
-- [ ] Myself, other devices
+- [ ] **Myself**, other devices
   - [ ] Privacy settings
   - [ ] Layout, Sizes, Responsiveness
   - [ ] Colours
   - [ ] Functionality
-- [ ] Ask:
+- [ ] **Ask:**
   - [ ] Questions, Problems
   - [ ] Feedback
   - [ ] Does Hosting work?
 
 ## Sections
 
-1. Profile
-1. My Coding Journey
-1. Goals & fac
-1. Projects
-1. Beethoven Bootcamp
-1. 4 Pitches
-1. Profiles & Contact
+**1. Profile**
+**1. My Coding Journey**
+**1. Goals & fac**
+**1. Projects**
+**1. Beethoven Bootcamp**
+**1. 4 Pitches**
+**1. Profiles & Contact**
