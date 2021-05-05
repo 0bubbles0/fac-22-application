@@ -56,8 +56,11 @@
   - [ ] Beethoven -> Form elements: select, button
 - [ ] **CSS**
   - [ ] make variable & class names
+  - [x] set up basics
   - [ ] *OK Layout:*
     - [ ] Basic page structure
+      - [x] Sidebar, main
+      - [ ] Footer
     - [ ] Alignment, gaps
     - [ ] Sizes
     - [ ] Style DOM-Placeholder
@@ -93,10 +96,10 @@
 
 ## Sections
 
-**1. Profile**
-**1. My Coding Journey**
-**1. Goals & fac**
-**1. Projects**
-**1. Beethoven Bootcamp**
-**1. 4 Pitches**
-**1. Profiles & Contact**
+1. Profile
+1. My Coding Journey
+1. Goals & fac
+1. Projects
+1. Beethoven Bootcamp
+1. 4 Pitches
+1. Profiles & Contact

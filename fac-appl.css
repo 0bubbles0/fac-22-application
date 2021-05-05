@@ -1,3 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+  --font-color:black;
+  --bground-color:beige;
+  --card-color:cadetblue;
+  --hover-color:grey;
+  --side-color: grey;
+  --accent-color:purple;
+  --light-color:yellow;
+  --dark-color:green;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family:'Open Sans', Arial, sans-serif;
+  font-size: 110%;
+  color: var(--font-color);
+}
+
+/*Side-Nav*/
 body {
-  background-color: cadetblue;
+/*  margin: 0;*/
+  background-color: var(--bground-color);
+/*  display: flex;*/
+}
+.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 20vw;
+  height: 100vh;
+  background-color: var(--side-color);
+}
+.flex-parent-col {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.nav-link {
+  /*  display: block;*/
+  /* background-color: yellow;*/
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--bground-color);
+}
+.nav-link:hover {
+  background-color: var(--bground-color);
+}
+
+/*Main-content*/
+.page-content {
+  height: 100vh;
+  margin-left: 20vw;
+  padding: 1.5em;
+}
+
+/*Decoration*/
+.img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.non-list {
+  list-style-type: none;
 }
