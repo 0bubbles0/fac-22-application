@@ -52,7 +52,7 @@ body {
 
 /*Main-content*/
 .page-content {
-  height: 100vh;
+  min-height: 100vh;
   margin-left: 20vw;
   padding: 1.5em;
 }
@@ -67,4 +67,14 @@ body {
 
 .non-list {
   list-style-type: none;
+}
+
+.p-bold {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.p-bold-key {
+  color: var(--accent-color);
+
 }
