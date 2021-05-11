@@ -15,9 +15,9 @@
   * Syllabus
   * Values
   * Opportunities after
-- [ ] Connect my CV
+- [x] Connect my CV
 - [x] Decide Sections
-- [ ] Write text
+- [x] Write text
 
 #### Functionality
 
@@ -30,10 +30,10 @@
 
 #### Media
 
-- [ ] logo --> Projects fcc-3, fcc-5
+- [x] logo --> Projects fcc-3, fcc-5
 - [ ] img? --> Copyright?
-- [ ] links --> profiles, projecs
-- [ ] Icons for GitHub, etc.
+- [x] links --> profiles, projects
+- [x] Icons for GitHub, etc.
 
 #### Design
 
@@ -52,7 +52,7 @@
     - [x] Header: title, nav, nav-links
     - [x] Sections: Set up
     - [x] Footer
-  - [ ] Insert text
+  - [x] Insert text
   - [ ] Beethoven -> Form elements: select, button
 - [ ] **CSS**
   - [ ] make variable & class names
@@ -60,7 +60,7 @@
   - [ ] *OK Layout:*
     - [ ] Basic page structure
       - [x] Sidebar, main
-      - [ ] Footer
+      - [x] Footer
     - [ ] Alignment, gaps
     - [ ] Sizes
     - [ ] Style DOM-Placeholder
@@ -101,5 +101,7 @@
 1. Goals & fac
 1. Projects
 1. Beethoven Bootcamp
+- [ ] Prep content
+- [ ] JavaScript
 1. 4 Pitches
 1. Profiles & Contact

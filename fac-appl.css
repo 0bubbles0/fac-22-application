@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 :root {
   --font-color:black;
@@ -16,7 +17,7 @@
 }
 
 html {
-  font-family:'Open Sans', Arial, sans-serif;
+  font-family:'Roboto', Arial, sans-serif;
   font-size: 110%;
   color: var(--font-color);
 }
@@ -49,6 +50,14 @@ body {
 .nav-link:hover {
   background-color: var(--bground-color);
 }
+.nav-link-last {
+  background-color: var(--accent-color);
+  color: var(--bground-color);
+}
+.nav-link-last:hover {
+  background-color: var(--accent-color);
+  opacity: 0.8;
+}
 
 /*Main-content*/
 .page-content {
@@ -64,6 +73,12 @@ body {
   max-width: 100%;
   height: auto;
 }
+.nav-logo {
+  width: 180px;
+  height: auto;
+  margin-left: 1vw;
+/*  flex-shrink: 0;*/
+}
 
 .non-list {
   list-style-type: none;
@@ -77,4 +92,47 @@ body {
 .p-bold-key {
   color: var(--accent-color);
 
+}
+
+/*Project Layout*/
+.project-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.project-tile {
+  display: block;
+  width: 22vw;
+  min-width: 250px;
+  /*  height: 40vh;*/
+  margin: 2em auto;
+  padding: 0.5em;
+}
+
+.project-tile-frame {}
+.project-tile-img {
+/*  height: 20vh;
+  width: 15vw;
+  object-fit: cover;*/
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*Project Design*/
+#projects > h3 {text-align: center;}
+.card-style {
+  text-decoration: none;
+  text-align:center;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px 0 rgba(0,0,0,0.2);
+}
+.card-style:hover {opacity: 0.8;}
+
+footer {
+  text-align: center;
+  border-top: 3px solid var(--accent-color);
+  padding-bottom: 0;
 }

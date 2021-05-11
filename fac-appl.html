@@ -11,11 +11,14 @@
 
   <title>fac Application Barbara</title>
   <link rel="stylesheet" type="text/css" href="fac-appl.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="fac-appl.js" defer></script>
 </head>
 
 <body>
   <header id="sidebar" class="sidebar">
+    <img class="nav-logo" src="resources/img/logo/logo-250-100.png"
+      onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/3-logo/logo-250-100.png'">
     <nav class="flex-parent-col">
       <a class="nav-link" href="#c-welcome">Welcome</a>
       <a class="nav-link" href="#c-intro">Background</a>
@@ -24,9 +27,9 @@
       <a class="nav-link" href="#c-journey">Coding Journey</a>
       <a class="nav-link" href="#c-projects">Projects</a>
       <a class="nav-link" href="#c-music">Beethoven Bootcamp</a>
-      <a class="nav-link" href="#c-goals">Goals</a>
+      <a class="nav-link" href="#c-goals">Coding Goals</a>
       <a class="nav-link" href="#c-fac-appl">Founders and Coders</a>
-      <a class="nav-link" href="#c-profiles">Profiles</a>
+      <a class="nav-link nav-link-last" href="#c-profiles">Profiles</a>
     </nav>
   </header>
 
@@ -37,8 +40,8 @@
       <h1>Welcome!</h1>
       <h2>My name is <span class="p-bold p-bold-key">Barbara</span> (she/her)</h2>
       <p>Some of my favourite <span class="p-bold">activities</span> are playing the violin, pub-quizzes and knitting
-        (also: making lists)</p>
-      <p>Currently, I am working on becoming a <span class="p-bold p-bold-key">Web Developer</span></p>
+        (also: making lists).</p>
+      <p>Currently, I am working on becoming a <span class="p-bold p-bold-key">Web Developer</span>.</p>
     </section>
 
     <section id="c-intro" class="page-content">
@@ -89,7 +92,7 @@
         <li>Contribute in preparing us for a <span class="p-bold">better future</span>.</li>
         <li>Play an active part in fully <span class="p-bold">digitising society</span>, opening it up to less
           tech-savvy consumers.</li>
-        <li><span class="p-bold">Support</span> people and institutions already on that path, lend my brain-power to
+        <li><span class="p-bold">Support</span> people and organisations already on that path, lend my brain-power to
           <span class="p-bold">“good tech”</span>.
         </li>
       </ul>
@@ -126,50 +129,50 @@
         <li>Use of assistive (voice) technologies.</li>
         <li>Guaranteed data protection – this is tech to serve its users, not exploit them.</li>
       </ul>
-      <article>
-        <h4>Live healthier</h4>
-        <ul>
-          <li>For <span class="p-bold">healthier habits</span> with nutrition, exercise & sleep</li>
-          <li>Simple, personalised, realistic</li>
-          <li>Planning tool for Recipes, Shopping Lists, Meal Plans, Workout-Schedules...</li>
-          <li>Smart nudges on healthy swaps, seasonal vegetable calendar, rain forecast...</li>
-          <li>Potential link-up with your GP/nutritionist.</li>
-        </ul>
-      </article>
+      <div class="project-container">
+        <article class="project-tile card-style">
+          <h4>Live healthier</h4>
+          <ul>
+            <li>For <span class="p-bold">healthier habits</span> with nutrition, exercise & sleep</li>
+            <li>Simple, personalised, realistic</li>
+            <li>Planning tool for Recipes, Shopping Lists, Meal Plans, Workout-Schedules...</li>
+            <li>Smart nudges on healthy swaps, seasonal vegetable calendar, rain forecast...</li>
+            <li>Potential link-up with your GP/nutritionist.</li>
+          </ul>
+        </article>
 
-      <article>
-        <h4>Private Tutor Bot</h4>
-        <ul>
-          <li>School Lessons as fun as Arcade games</li>
-          <li>Fully interactive, <span class="p-bold">animated Syllabus</span></li>
-          <li>Customise lessons, replay explanations at home, get corrections</li>
-          <li>Accommodate different learning styles, attention spans</li>
-          <li>Make a version of Private Tutoring available to every child</li>
-        </ul>
-      </article>
+        <article class="project-tile card-style">
+          <h4>Private Tutor Bot</h4>
+          <ul>
+            <li>School Lessons as fun as gaming</li>
+            <li>Fully interactive, <span class="p-bold">animated Syllabus</span></li>
+            <li>Customise lessons, replay explanations at home, get exercise corrections</li>
+            <li>Accommodate different learning styles, attention spans</li>
+            <li>Make private tutoring available to every child regardless of family income</li>
+          </ul>
+        </article>
 
-      <article>
-        <h4>Neighbourhood Errands</h4>
-        <ul>
-          <li><span class="p-bold">Volunteer Uber</span></li>
-          <li>For rural areas, seniors, vulnerable people, new parents...</li>
-          <li>Make giving & asking for help less daunting</li>
-          <li>Reduce loneliness, connect communities</li>
-          <li>Safety checks, assistive technology, auto-pay...</li>
-        </ul>
-      </article>
+        <article class="project-tile card-style">
+          <h4>Neighbourhood Errands</h4>
+          <ul>
+            <li><span class="p-bold">Volunteer Uber</span></li>
+            <li>For rural areas, seniors, vulnerable people, new parents...</li>
+            <li>Make giving & asking for help less daunting</li>
+            <li>Reduce loneliness, connect communities</li>
+            <li>Safety checks, assistive technology, auto-pay...</li>
+          </ul>
+        </article>
 
-      <article>
-
-        <h4>Personal Safety</h4>
-        <ul>
-          <li><span class="p-bold">Call 999 via safe word</span></li>
-          <li>For threatening situations (street crime, assault, domestic abuse)</li>
-          <li>Saying a safe word or signal makes your phone contact a friend or 999</li>
-          <li>Depending on legality: record GPS location, start audio-recording for evidence</li>
-        </ul>
-      </article>
-
+        <article class="project-tile card-style">
+          <h4>Personal Safety</h4>
+          <ul>
+            <li><span class="p-bold">Call 999 via safe word</span></li>
+            <li>For threatening situations (street crime, assault, domestic abuse)</li>
+            <li>Saying a safe word or signal makes your phone contact a friend or 999</li>
+            <li>Depending on legality: record GPS location, start audio-recording for evidence</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
     <section id="c-journey" class="page-content">
@@ -179,14 +182,84 @@
     </section>
 
     <section id="c-projects" class="page-content">
-      <h3>Projects</h3>
+      <h3>Completed Projects</h3>
+      <h4>HTML & CSS: FreeCodeCamp “Responsive Web Design”</h4>
+      <div class="project-container">
+        <a class="project-tile card-style" href="https://codepen.io/0Bubbles0/full/mdPXbQr" target="_blank">
+          <p class="project-name">1. Tribute</p>
+          <div class="project-tile-frame">
+            <img class="project-tile-img" src="resources/img/projects/01-tribute.png"
+              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+              alt="Tribute">
+          </div>
+        </a>
+        <a class="project-tile card-style" href="https://codepen.io/0Bubbles0/full/xxRrgeo " target="_blank">
+          <p class="project-name">2. Form</p>
+          <div class="project-tile-frame">
+            <img class="project-tile-img" src="resources/img/projects/02-form.png"
+              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/2-form.png'"
+              alt="Form">
+          </div>
+        </a>
+        <a class="project-tile card-style" href="https://codepen.io/0Bubbles0/full/VwmxgWq " target="_blank">
+          <p class="project-name">3. Product Landing Page</p>
+          <div class="project-tile-frame">
+            <img class="project-tile-img" src="resources/img/projects/03-landing.png"
+              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/3-landing.png'"
+              alt="Product Landing">
+          </div>
+        </a>
+        <a class="project-tile card-style" href="https://codepen.io/0Bubbles0/full/mdOLvqZ " target="_blank">
+          <p class="project-name">4. Technical Documentation</p>
+          <div class="project-tile-frame">
+            <img class="project-tile-img" src="resources/img/projects/04-docu.png"
+              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/4-docu.png'"
+              alt="Documentation">
+          </div>
+        </a>
+        <a class="project-tile card-style" href="https://codepen.io/0Bubbles0/full/bGBmQVP" target="_blank">
+          <p class="project-name">5. Portfolio</p>
+          <div class="project-tile-frame">
+            <img class="project-tile-img" src="resources/img/projects/05-pfolio.png"
+              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+              alt="Tribute">
+          </div>
+        </a>
+      </div>
+      <h4>Founders & Coders Coaching Workshops</h4>
+      <div class="project-container">
+        <a class="project-tile card-style" href="https://codepen.io/0Bubbles0/full/JjEzqLX" target="_blank">
+          <p class="project-name">1. Tribute Page</p>
+          <div class="project-tile-frame">
+            <img class="project-tile-img" src="resources/img/projects/11-tribute.png"
+              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+              alt="Tribute">
+          </div>
+        </a>
+        <a class="project-tile card-style" href="https://codepen.io/0Bubbles0/full/xxgypQd" target="_blank">
+          <p class="project-name">2. DOM Events</p>
+          <div class="project-tile-frame">
+            <img class="project-tile-img" src="resources/img/projects/12-events.png"
+              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+              alt="Tribute">
+          </div>
+        </a>
+        <a class="project-tile card-style" href="https://codepen.io/0Bubbles0/full/zYZvbQp" target="_blank">
+          <p class="project-name">3. Button calculator</p>
+          <div class="project-tile-frame">
+            <img class="project-tile-img" src="resources/img/projects/13-button-calc.png"
+              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+              alt="Tribute">
+          </div>
+        </a>
+      </div>
     </section>
 
     <section id="c-music" class="page-content">
       <h3>Beethoven Bootcamp</h3>
       <p>Covid-19 has been a lonely time for passionate amateur orchestra players (especially us thriving in the
         second row), so what do you do when your fingers tingle and the feet tap a rhythm?</p>
-      <p>Choose your preferred key signature and this generator will recommend the right movements from Beethoven
+      <p>Choose your preferred key signature and this generator will recommend movements from Beethoven
         Symphonies and refer you to sheet music from IMSLP (please respect copyright):</p>
     </section>
 
@@ -196,8 +269,7 @@
       <ul>
         <li>Practice using JavaScript in context, how does a Pop-up work?</li>
         <li>Practice <span class="p-bold">Version Control</span> and using the Terminal</li>
-        <li>Experience more <span class="p-bold">collaboration</span> through conversations, pair programming and on
-          GitHub</li>
+        <li>Practice <span class="p-bold">collaboration</span> through pair programming and GitHub</li>
         <li>Standards for <span class="p-bold">Visual Design</span> & UX</li>
         <li>Standards for <span class="p-bold">Accessibility</span> and Assistive Technologies</li>
         <li><span class="p-bold">Frameworks</span> (e.g. Bootstrap)</li>
@@ -208,54 +280,85 @@
       </ul>
     </section>
 
-    <span class="p-bold">Developer job</span>
+
 
     <section id="c-fac-appl" class="page-content">
       <h3>Founders and Coders</h3>
-      <h4>A place in the Founders and Coders Cohort 22 in Autumn 2021 would be an incredible opportunity to continue
+      <h4>A place in the <span class="p-bold">Founders and Coders Cohort 22 in Autumn 2021</span> would be an incredible
+        opportunity to continue
         pursuing these
         goals in tandem with others.</h4>
       <ul>
-        <li>Participating in the Coaching Programme and especially working with the Dragonfly Study Group has already
-          felt like a Bootcamp. The last few weeks supercharged my progress and motivation, gave me more support and
-          confidence on the path to being a developer than I could have imagined. </li>
-        <li>In the group, we have already had several fantastic “aha!” moments and it would be an absolute privilege
-          to continue learning together, to keep up the pace, have some progress accountability and explore
-          collaborating on GitHub. While creating this website, I already considered several times how tasks might have
+        <li>Participating in the <span class="p-bold">Coaching Programme</span> and especially working with the
+          Dragonfly Study Group has already
+          felt like a Bootcamp. The last few weeks supercharged my <span class="p-bold">progress</span> and <span
+            class="p-bold">motivation</span>,
+          gave me more <span class="p-bold">support</span> and
+          <span class="p-bold">confidence</span> on the path to being a developer than I could have imagined.
+        </li>
+        <li>In the <span class="p-bold">group</span>, we have already had several fantastic “aha!” moments and it would
+          be an absolute privilege
+          to continue learning together, to keep up the pace, have some <span class="p-bold">progress
+            accountability</span> and explore
+          <span class="p-bold">collaborating</span> on projects and GitHub. While creating this website, I already
+          considered several
+          times how tasks might have
           been shared with partners. It would be exciting and immensely valuable to be able to mix my analytical
-          problem-solving aptitude with the fantastic visual design creativity of my fellow current coachees.</li>
+          problem-solving aptitude with the fantastic <span class="p-bold">visual design creativity</span> of my fellow
+          current coachees.
+        </li>
       </ul>
-      <h4>To continue as part of the community</h4>
+      <h4>To continue as part of the <span class="p-bold">community</span></h4>
       <ul>
-        <li>It felt safe to be invited to an environment that values mutual supportiveness over competitiveness. The
-          special emphasis on pastoral care and respectful and encouraging communication has made a lasting impact on
+        <li>It felt <span class="p-bold">safe</span> to be invited to an environment that values <span
+            class="p-bold">mutual supportiveness</span>
+          over competitiveness. The
+          special emphasis on <span class="p-bold">pastoral care</span> and <span class="p-bold">respectful</span> and
+          encouraging communication has
+          made a lasting impact on
           how I wish to conduct teamwork, which values and inter-personal dynamics I will be more proactive in fostering
           in work environments going forward. Meeting someone with different life experiences is an opportunity to
-          learn, not a complication. How can we expect board-rooms to create original solutions if they all have almost
-          identical life experiences?</li>
-        <li>Already, I have greatly benefited from countless alumni and feel inspired to continue carrying the
+          learn, not a complication!</li>
+        <li>Already, I have greatly benefited from countless <span class="p-bold">alumni</span> and feel inspired to
+          continue carrying the
           torch. On top of being eager to pass on everything I have learned so far to anyone who will listen, I would be
           especially excited to be involved in workshops for complete beginners – writing first HTML in a text editor or
           starting the first Codepen. Because I am convinced that coding could be a path for others to get themselves
           out of much stickier life situations than mine.</li>
       </ul>
-      <h4>The Structure of the Course and Apprenticeship would provide the invaluable</h4>
-      <ul>
-        <li>guidance on technical employer interviews during the Pre-apprenticeship that could help overcome my CV
-          and confidence issues.</li>
-        <li>financial security and peace of mind for me to fully absorb into the Bootcamp.
 
+
+      <h4>The Structure of the Course and <span class="p-bold">Apprenticeship</span> would provide the invaluable</h4>
+      <ul>
+        <li><span class="p-bold">guidance</span> on technical employer interviews during the Pre-apprenticeship that
+          could help overcome my CV
+          and confidence issues.</li>
+        <li><span class="p-bold">financial security</span> and peace of mind for me to fully absorb into the Bootcamp.
         </li>
-        <li>full package of Bootcamp, certification and 1-2 years of experience to set me on the career path I
+        <li>full package of Bootcamp, certification and 1-2 years of experience to set me on the <span
+            class="p-bold">career path</span> I
           would enjoy.</li>
       </ul>
     </section>
 
     <section id="c-profiles" class="page-content">
       <h3>Profiles</h3>
+      <p>Thank you for reading my story and considering my application to the upcoming Founders and Coders Cohort 22!
+      </p>
+      <p>You can view my completed course requirements and other coding endeavours on:</p>
+      <a id="link-fcc" href="https://www.freecodecamp.org/0bubbles0" target="_blank"><i
+          class="fa fa-free-code-camp"></i>FCC</a>
+      <a id="link-codewars" href="https://www.codewars.com/users/0bubbles0" target="_blank"><i
+          class="fa fa-share-square"></i>Codewars</a>
+
+      <a id="profile-link" href="https://github.com/0bubbles0" target="_blank"><i class="fa fa-github"></i>GitHub</a>
+      <a id="link-codepen" href="https://codepen.io/0Bubbles0" target="_blank"><i class="fa fa-codepen"></i>Codepen</a>
+      <a id="link-repl" href="https://repl.it/@0bubbles01" target="_blank"><i
+          class="fa fa-pencil-square-o"></i>Repl.it</a>
     </section>
 
     <!--
+      <a><i></i></a>
       <section id="C">
       <h3></h3>
     </section>
@@ -264,7 +367,7 @@
   </main>
 
   <footer>
-    <p>bubbles</p>
+    <p>&#169; 2021 &lt;bubbles&gt;</p>
   </footer>
 
 </body>
