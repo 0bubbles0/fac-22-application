@@ -21,11 +21,11 @@
 
 #### Functionality
 
-- [ ] possible DOM ideas
+- [x] possible DOM ideas
 - [ ] Beethoven Bootcamp
   - [ ] HTML&CSS: form-select, button, "Chalkboard" for results&links
-  - [ ] Movement key-signatures
-  - [ ] Links
+  - [x] Movement key-signatures
+  - [x] Links
 - [ ] ? Baking Converter
 
 #### Media
@@ -42,7 +42,7 @@
 - [ ] Fonts
 - [ ] Colors: Palettes
 - [ ] Check my other fcc Projects
-- [ ] Paper sketch
+- [x] Paper sketch
 
 ### Code
 
