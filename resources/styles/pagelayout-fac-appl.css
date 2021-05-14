@@ -1,0 +1,82 @@
+/*General*/
+:root {
+  --logo-color:	#004f70;
+  --bground-color:#cef6ff;
+  --side-color:#ffb703;
+  --hover-color:#f9f871;
+  --font-color: black;
+  --card-color:#f9f871;
+}
+
+/*
+* {border: 0.01px solid green};
+*/
+
+/*LAYOUT*/
+/*Layout General*/
+* {box-sizing: border-box};
+
+.hidden {}
+.flex-parent-col{  /*  background-color: var(--hover-color);*/}
+
+
+
+
+
+
+
+/*DESIGN*/
+/*Design General*/
+body{  background-color: var(--bground-color);}
+
+.button{
+  background-color: var(--logo-color);
+  color: var(--side-color);
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.button:hover {opacity: 0.5; cursor: pointer;}
+#button-surprise{}
+
+/*Design Text*/
+.p-bold {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.p-bold-key {
+  color: var(--accent-color);
+
+}
+
+/*Design Nav*/
+.sidebar{}
+#sidebar {
+  background-color: var(--side-color);
+}
+#nav-top{}
+.nav-logo{
+  max-width: 12vw;
+  height: auto;
+}
+/*
+.nav-link {
+  padding: 1em 1em;
+  border-bottom: 1px solid var(--bground-color);
+}
+*/
+.nav-link:hover {   background-color: var(--bground-color);}
+
+/*Design Page*/
+.page-content{}
+#c-welcome{}
+
+/*Design Footer*/
+footer {
+  color: var(--logo-color);
+  text-align: center;
+  border-top: 3px solid var(--logo-color);
+  padding-bottom: 0;
+}
+

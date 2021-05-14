@@ -12,31 +12,35 @@
 
     <title>fac-appl Basic Page</title>
     <link rel="stylesheet" type="text/css" href="resources/styles/pagelayout-fac-appl.css">
+    <!--Icons Font Awesome 4-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="resources/scripts/fac-appl.js" defer></script>
   </head>
 
 <body>
 
-  <header>
+  <header id="sidebar" class="sidebar">
+    <div class="" id="nav-top">
+      <img class="nav-logo" src="resources/img/logo/logo1-250-100.png">
+      <button class="button" id="button-surprise">Surprise!</button>
+    </div>
 
     <nav class="flex-parent-col">
-      <a class="nav-link" href="#c-welcome">Welcome</a>
-      <a class="nav-link" href="#c-intro">Background</a>
-      <a class="nav-link" href="#c-values">Values</a>
-      <a class="nav-link" href="#c-pitches">Ideas</a>
-      <a class="nav-link" href="#c-journey">Coding Journey</a>
-      <a class="nav-link" href="#c-projects">Projects</a>
-      <a class="nav-link" href="#c-music">Beethoven Bootcamp</a>
-      <a class="nav-link" href="#c-goals">Coding Goals</a>
-      <a class="nav-link" href="#c-fac-appl">Founders and Coders</a>
-      <a class="nav-link nav-link-last" href="#c-profiles">Profiles</a>
+      <a class="nav-link nav-hidden" href="#c-welcome">Welcome</a>
+      <a class="nav-link nav-hidden" href="#c-intro">Background</a>
+      <a class="nav-link nav-hidden" href="#c-values">Values</a>
+      <a class="nav-link nav-hidden" href="#c-pitches">Ideas</a>
+      <a class="nav-link nav-hidden" href="#c-projects">Projects</a>
+      <a class="nav-link nav-hidden" href="#c-music">BeetBoot</a>
+      <a class="nav-link nav-hidden" href="#c-goals">Coding Goals</a>
+      <a class="nav-link" href="#c-fac-appl">fac</a>
+      <a class="nav-link" href="#c-profiles">Profiles</a>
     </nav>
 
   </header>
 
   <main>
-
+    <!--
     <section id="c-welcome" class="page-content">
       <h1>Welcome!</h1>
       <h2>My name is <span class="p-bold p-bold-key">Barbara</span> (she/her)</h2>
@@ -44,10 +48,49 @@
         (also: making lists).</p>
       <p>Currently, I am working on becoming a <span class="p-bold p-bold-key">Web Developer</span>.</p>
     </section>
+  -->
+
+    <section id="c-intro" class="page-content">
+      <h3>Background</h3>
+      <p>During the studies for my <span class="p-bold p-bold-key">BSc Economics at SOAS, University of London </span>
+        (School
+        of Oriental and African Studies), I <span class="p-bold">learned</span> to:</p>
+      <ul>
+        <li><span class="p-bold">Research</span> new topics in collaboration as well as independently.</li>
+        <li><span class="p-bold">Solve</span> real-life <span class="p-bold">problems analytically</span> through
+          abstract models.</li>
+        <li>Understand the causes and societal <span class="p-bold">cost of unequal opportunities</span> and unused
+          potential, as well as
+          international development issues, incentives and interactions between individuals, businesses and societies.
+        </li>
+        <li>Enjoy the <span class="p-bold">international environment</span> and <span class="p-bold">diversity of
+            ideas</span> from teachers and
+          peers, around 50% of us being
+          international, from all walks of life, cultures, ages, classes and personal identities.</li>
+        <li>Value the <span class="p-bold">creativity</span> and brain power that can be sparked through <span
+            class="p-bold">respectful,
+            open-minded dialogue</span>.</li>
+      </ul>
+
+      <p><span class="p-bold p-bold-key">Discovering Coding</span> through a random advert for the Google Grasshopper
+        app <span class="p-bold">felt</span>:</p>
+      <ul>
+        <li>Immediately <span class="p-bold">comfortable</span> and logical.</li>
+        <li>Like <span class="p-bold">lightning struck</span> – why had no one shown me this at school?</li>
+        <li><span class="p-bold">Inviting</span> – I had always assumed it a secret club for teenage boys.</li>
+        <li><span class="p-bold">Exciting</span> to imagine the life-hacks I might learn to create with a few lines of
+          code!</li>
+        <li>Like a path to get my life <span class="p-bold">unstuck</span> from a few lost years.</li>
+      </ul>
+
+    </section>
+
 
   </main>
 
-  <footer></footer>
+  <footer>
+    <p>&#169; 2021 &lt;bubbles&gt;</p>
+  </footer>
 
 </body>
 
