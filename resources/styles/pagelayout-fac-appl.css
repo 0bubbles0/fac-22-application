@@ -39,6 +39,16 @@ body{  background-color: var(--bground-color);}
 .button:hover {opacity: 0.5; cursor: pointer;}
 #button-surprise{}
 
+li {
+  list-style-image: url('resources\img\logo\bubble-mini.svg');
+}
+
+.bubble-list {
+  width: 1vw;
+  height: auto;
+  margin: auto 0.1vw;
+}
+
 /*Design Text*/
 .p-bold {
   font-weight: bold;
