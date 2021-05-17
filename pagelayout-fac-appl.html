@@ -17,15 +17,19 @@
     <script src="resources/scripts/fac-appl.js" defer></script>
   </head>
 
-<body>
+<body class="page-full">
 
-  <header id="sidebar" class="sidebar">
-    <div class="" id="nav-top">
-      <img class="nav-logo" src="resources/img/logo/logo1-250-100.png">
-      <button class="button" id="button-surprise">Surprise!</button>
-    </div>
+  <header id="logo-bar" class="logo-bar sidebar">
+    <img class="nav-logo" src="resources/img/logo/logo1-250-100.png">
+    <!-- 
+    <p id="logo-bar-title" class="logo-bar-title">Title</p>
+    <div class="profile-icons"></div>
+    -->
+    <button class="button button-surprise" id="button-surprise">Surprise!</button>
+  </header>
 
-    <nav class="flex-parent-col">
+  <aside id="nav-bar" class="nav-bar sidebar">
+    <nav class="nav-flex">
       <a class="nav-link nav-hidden" href="#c-welcome"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Welcome</a>
       <a class="nav-link nav-hidden" href="#c-intro"><img class="bubble-list"
@@ -44,10 +48,9 @@
       <a class="nav-link" href="#c-profiles"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Profiles</a>
     </nav>
+  </aside>
 
-  </header>
-
-  <main>
+  <main id="main" class="page-content">
     <!--
     <section id="c-welcome" class="page-content">
       <h1>Welcome!</h1>
@@ -58,7 +61,7 @@
     </section>
   -->
 
-    <section id="c-intro" class="page-content">
+    <section id="c-intro" class="chapter">
       <h3>Background</h3>
       <p>During the studies for my <span class="p-bold p-bold-key">BSc Economics at SOAS, University of London </span>
         (School
@@ -96,7 +99,7 @@
 
   </main>
 
-  <footer>
+  <footer class="page-footer">
     <p>&#169; 2021 &lt;bubbles&gt;</p>
   </footer>
 

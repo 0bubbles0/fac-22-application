@@ -1,4 +1,6 @@
 /*General*/
+@import url('resources\img\logo\bubble-mini.png');
+
 :root {
   --logo-color:	#004f70;
   --bground-color:#cef6ff;
@@ -19,11 +21,76 @@
 .hidden {}
 .flex-parent-col{  /*  background-color: var(--hover-color);*/}
 
+/*Page Grid Overall*/
+.logo-bar { grid-area: header;}
+.nav-bar {grid-area: nav;}
+.page-content {grid-area: main;}
+.page-footer {grid-area: footer;}
+.page-full {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template: auto 1fr auto/ 16vw 1fr 1fr auto;
+  grid-template-areas: 
+  "header header header header"
+  "nav main main main"
+  "nav footer footer footer";
+}
 
+@media only screen and (max-width: 992px) {/*tablet*/
+  .page-full {
+    grid-template: auto auto 1fr auto / auto 1fr auto;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+  }
+} 
+@media only screen and (max-width: 800px) {/*phone*/
+  .page-full {
+    grid-template: auto auto 1fr auto / auto auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main"
+    "footer footer";
+  }
+  .nav-hidden { display: none;}
+} 
 
+/*Layout logo-bar, nav-bar*/
+.logo-bar {
+  padding: 0 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-flex {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.nav-link {
+  padding: 1em;
+  border-bottom: 1px solid var(--bground-color);
+}
 
+@media only screen and (max-width: 992px) {
+  .nav-flex {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .nav-link {
+    padding: 0.5em;
+  }
+}
 
-
+/*Layout Sections*/
+.chapter {
+  margin: 1em;
+}
 
 /*DESIGN*/
 /*Design General*/
@@ -37,16 +104,18 @@ body{  background-color: var(--bground-color);}
   padding: 5px 10px;
 }
 .button:hover {opacity: 0.5; cursor: pointer;}
-#button-surprise{}
+.button-surprise{
+  padding: 1.5vh 1.5vw;
+}
 
-li {
-  list-style-image: url('resources\img\logo\bubble-mini.svg');
+ul {
+  list-style-image: url('resources\img\logo\bubble-mini.jpg');
 }
 
 .bubble-list {
   width: 1vw;
   height: auto;
-  margin: auto 0.1vw;
+  margin: auto 0.5vw;
 }
 
 /*Design Text*/
@@ -61,21 +130,23 @@ li {
 }
 
 /*Design Nav*/
-.sidebar{}
-#sidebar {
+.sidebar{
   background-color: var(--side-color);
 }
-#nav-top{}
+#sidebar {
+}
+.nav-bar { background-color: var(--card-color);}
 .nav-logo{
+  min-width: 150px;
   max-width: 12vw;
   height: auto;
 }
 /*
 .nav-link {
-  padding: 1em 1em;
   border-bottom: 1px solid var(--bground-color);
 }
 */
+.nav-link, .nav-link:visited { color: var(--logo-color);}
 .nav-link:hover {   background-color: var(--bground-color);}
 
 /*Design Page*/
@@ -90,3 +161,12 @@ footer {
   padding-bottom: 0;
 }
 
+
+
+
+
+/*
+@media only screen and (min-width: 600px) {phone-L, tablet-Portrait} 
+@media only screen and (min-width: 768px) {tablet-Landscape} 
+@media only screen and (min-width: 1200px) {XL Lap-Desktop} 
+*/
