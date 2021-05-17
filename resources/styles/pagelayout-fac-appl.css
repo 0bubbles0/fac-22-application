@@ -8,6 +8,7 @@
   --hover-color:#f9f871;
   --font-color: black;
   --card-color:#f9f871;
+  --accent-color: purple;
 }
 
 /*
@@ -89,7 +90,26 @@
 
 /*Layout Sections*/
 .chapter {
-  margin: 1em;
+  min-height: 85vh;
+  margin: 1.5em;
+}
+.ch-2col-parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ch-2col-child {
+  flex: 1 1 50%;
+  padding: 1.5em;
+}
+@media only screen and (max-width: 800px) {
+  .ch-2col-parent {
+    flex-direction: column wrap;
+  }
+  .ch-2col-child {
+    flex: 1 1 100%;
+  }
+  /*
+  */
 }
 
 /*DESIGN*/
