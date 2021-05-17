@@ -25,11 +25,11 @@
 /*Page Grid Overall*/
 .logo-bar { grid-area: header;}
 .nav-bar {grid-area: nav;}
-.page-content {grid-area: main;}
+.page-content {grid-area: main; overflow: auto;}
 .page-footer {grid-area: footer;}
 .page-full {
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template: auto 1fr auto/ 16vw 1fr 1fr auto;
   grid-template-areas: 
