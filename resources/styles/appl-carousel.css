@@ -1,0 +1,109 @@
+:root {
+  --logo-color:	#004f70;
+  --bground-color:#cef6ff;
+  --side-color:#ffb703;
+  --hover-color:#f9f871;
+  --font-color: black;
+  --card-color:#f9f871;
+  --accent-color: purple;
+}
+
+/*Layout Chapter*/
+.chapter {
+  min-height: 85vh;
+  margin: 2em;  
+  display: grid;
+  grid-template: auto repeat(3, 1fr) / repeat(6, 1fr);
+  grid-gap: 2vh 2vw;
+}
+.ch-header {
+  grid-area: 1/1/span 1/ span 6;
+  justify-self: center;
+}
+.ch-2col-left {grid-area: 2/1/span 3/span 3;}
+.ch-2col-right {grid-area: 2/4/span 3/span 3;}
+.ch-3col-left {grid-area: 2/1/span 3/span 2;}
+.ch-3col-middle {grid-area: 2/3/span 3/span 2;}
+.ch-3col-right {grid-area: 2/5/span 3/span 2;}
+
+/*Layout Profiles*/
+.ch-profiles-header {grid-area: prh;}
+.ch-profiles-intro {grid-area: prin; justify-self: left;}
+.ch-profiles-a {grid-area: ghub;}
+.ch-profiles-b {grid-area: repo;}
+.ch-profiles-c {grid-area: fcc;}
+.ch-profiles-d {grid-area: wars;}
+.ch-profiles-e {grid-area: pen;}
+.ch-profiles-f {grid-area: repl;}
+
+.chapter-profiles {
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+  "prin prin prin prin prin prin"
+  ". . repo ghub . ."
+  ". fcc prh prh repl ."
+  ". . wars pen . .";
+}
+
+@media only screen and (max-width: 800px) {
+  .chapter {grid-template: auto repeat(6, 1fr) / repeat(3, 1fr);}
+  .ch-header {grid-area: 1/1/span 1/ span 3;}
+  .ch-2col-left {grid-area: 2/1/span 3/span 3;}
+  .ch-2col-right {grid-area: 5/1/span 3/span 3;}
+  .ch-3col-left {grid-area: 2/1/span 2/span 3;}
+  .ch-3col-middle {grid-area: 4/1/span 2/span 3;}
+  .ch-3col-right {grid-area: 6/1/span 2/span 3;}
+  .chapter-profiles {
+    justify-items: left;
+    grid-template-areas:
+    "prin  prin prin"
+    "prh prh prh"
+    ". repo repo"
+    ". fcc fcc"
+    ". wars wars"
+    ". ghub ghub"
+    ". pen pen"
+    ". repl repl";
+  }
+}
+
+/*DESIGN*/
+/*Design General*/
+body{  background-color: var(--bground-color);}
+
+.button{
+  background-color: var(--logo-color);
+  color: var(--side-color);
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.button:hover {opacity: 0.5; cursor: pointer;}
+.button-surprise{
+  padding: 1.5vh 1.5vw;
+}
+
+ul {
+  list-style-image: url('resources\img\logo\bubble-mini.jpg');
+}
+
+.bubble-list {
+  width: 1vw;
+  height: auto;
+  margin: auto 0.5vw;
+}
+
+/*Design Text*/
+.p-bold {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.p-bold-key {
+  color: var(--accent-color);
+
+}
+
+.nav-link, .nav-link:visited, a, a:visited { color: var(--logo-color);}
+.nav-link:hover {   background-color: var(--bground-color);}
