@@ -1,0 +1,101 @@
+:root {
+  --logo-color:	#004f70;
+  --bground-color:#cef6ff;
+  --side-color:#ffb703;
+  --hover-color:#f9f871;
+  --font-color: black;
+  --card-color:#f9f871;
+  --accent-color: purple;
+}
+
+* {box-sizing: border-box};
+
+
+
+/*Layout Carousels*/
+.carousel-grid {
+  background-color: lightpink;
+  max-height: 60vh;
+  display: grid;
+  grid-template: auto auto 1fr / auto 1fr auto;
+ /* grid-template: min-content min-content 1fr / auto 1fr auto;
+ /* grid-gap: 1em;*/
+  justify-items: center;
+  grid-template-areas:
+  "crhd crhd crhd"
+  "crsbhd crsbhd crsbhd"
+  "crbk crcard crnx";
+}
+.carousel-head {grid-area: crhd; margin: 0 auto;}
+.carousel-subhead {grid-area: crsbhd; margin: 0 auto;}
+.carousel-item-container {
+  background-color: lightgreen;
+  grid-area: crcard;
+  /*
+  justify-self: stretch;
+ align-self: center;
+  figure out a height*/
+}
+.button-car-back {grid-area: crbk;}
+.button-car-next {grid-area: crnx;}
+.button-car {align-self: center;}
+
+/*Layout Project cards*/
+.carousel-item-container {}
+.project-tile {
+  display: block;
+  /*
+  height: 60vh;
+  width: 30vw; 
+  */
+  margin: 1em;
+  padding: 0.5em;
+}
+.card-style {
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px 0 rgba(0,0,0,0.2);
+}
+.card-style:hover {opacity: 0.8;}
+.card-list { text-align: justify;}
+.project-name {
+  text-align: center;
+  margin: 0 auto;
+/*  margin: 2vh auto;*/
+}
+.project-tile-frame {
+  /*
+  width: 80%;
+  height: 20vh;
+  height: 50%;
+  */
+  margin: 0 auto;
+}
+.project-tile-img {
+  width: 60px;
+  height: 45px;
+  /* 
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  */
+}
+
+
+.button{
+  background-color: var(--logo-color);
+  color: var(--side-color);
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.button-car {
+  border-radius: 50%;
+}
+.button:hover {opacity: 0.5; cursor: pointer;}
+.button-surprise{
+  padding: 1.5vh 1.5vw;
+}
