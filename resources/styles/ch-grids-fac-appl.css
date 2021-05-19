@@ -126,6 +126,7 @@
 }
 .ch-header {
   grid-area: 1/1/span 1/ span 6;
+  justify-self: center;
 }
 .ch-2col-left {grid-area: 2/1/span 3/span 3;}
 .ch-2col-right {grid-area: 2/4/span 3/span 3;}
@@ -168,6 +169,7 @@
 .ch-profiles-f {grid-area: repl;}
 
 .chapter-profiles {
+  justify-items: center;
   grid-template-areas:
   "prin prin prin prin prin prin"
   ". . repo ghub . ."
