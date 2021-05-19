@@ -99,3 +99,11 @@
 .button-surprise{
   padding: 1.5vh 1.5vw;
 }
+
+.tile-visible {
+  display: block;
+}
+
+.tile-hidden {
+  display: none;
+}
