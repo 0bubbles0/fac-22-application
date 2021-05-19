@@ -313,7 +313,13 @@ footer {
 }
 
 
+.tile-visible {
+  display: block;
+}
 
+.tile-hidden {
+  display: none;
+}
 
 
 /*
