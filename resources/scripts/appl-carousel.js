@@ -11,14 +11,7 @@ const fccBackButton = document.querySelector("#button-back-fcc");
 const fccNextButton = document.querySelector("#button-next-fcc");
 let fccVisibleIndex = 0;
 
-//FAC Carousel
-const facImages = Array.from(document.getElementsByClassName("fac-tile"));
-const facBackButton = document.querySelector("#button-back-fac");
-const facNextButton = document.querySelector("#button-next-fac");
-let facVisibleIndex = 0;
-
-//Functions
-//new visibility
+//Helper-Functions
 //ideas
 function ideasNewVisibility() {
   ideasImages.forEach((element, index) => {
@@ -36,19 +29,6 @@ function ideasNewVisibility() {
 function fccNewVisibility() {
   fccImages.forEach((element, index) => {
     if (index === fccVisibleIndex) {
-      element.classList.remove("tile-hidden");
-      element.classList.add("tile-visible");
-    } else {
-      element.classList.remove("tile-visible");
-      element.classList.add("tile-hidden");
-    }
-  })
-}
-
-//fac
-function facNewVisibility() {
-  facImages.forEach((element, index) => {
-    if (index === facVisibleIndex) {
       element.classList.remove("tile-hidden");
       element.classList.add("tile-visible");
     } else {
@@ -97,7 +77,35 @@ function nextFccFn() {
   fccNewVisibility();
 }
 
-//fac
+//Event Listeners
+ideasBackButton.addEventListener("click", backIdeasFn);
+ideasNextButton.addEventListener("click", nextIdeasFn);
+
+fccBackButton.addEventListener("click", backFccFn);
+fccNextButton.addEventListener("click", nextFccFn);
+
+
+//------------------------------------------
+//FAC Carousel
+const facImages = Array.from(document.getElementsByClassName("fac-tile"));
+const facBackButton = document.querySelector("#button-back-fac");
+const facNextButton = document.querySelector("#button-next-fac");
+let facVisibleIndex = 0;
+
+//helper function: new visibility
+function facNewVisibility() {
+  facImages.forEach((element, index) => {
+    if (index === facVisibleIndex) {
+      element.classList.remove("tile-hidden");
+      element.classList.add("tile-visible");
+    } else {
+      element.classList.remove("tile-visible");
+      element.classList.add("tile-hidden");
+    }
+  })
+}
+
+//each direction
 function backFacFn() {
   if (facVisibleIndex === 0) {
     facVisibleIndex = facImages.length - 1;
@@ -116,23 +124,103 @@ function nextFacFn() {
   facNewVisibility();
 }
 
-//Event Listeners
-ideasBackButton.addEventListener("click", backIdeasFn);
-ideasNextButton.addEventListener("click", nextIdeasFn);
+//fac-carousel with general helper-function
+function newVisibility(arr, visindex) {
+  arr.forEach((element, index) => {
+    if (index === visindex) {
+      element.classList.remove("tile-hidden");
+      element.classList.add("tile-visible");
+    } else {
+      element.classList.remove("tile-visible");
+      element.classList.add("tile-hidden");
+    }
+  })
+}
+function backFacFnGeneral() {
+  console.log(facVisibleIndex);
+  if (facVisibleIndex === 0) {
+    facVisibleIndex = facImages.length - 1;
+  } else {
+    facVisibleIndex--;
+  }
+  console.log(facVisibleIndex);
+  newVisibility(facImages, facVisibleIndex);
+}
 
-fccBackButton.addEventListener("click", backFccFn);
-fccNextButton.addEventListener("click", nextFccFn);
+function nextFacFnGeneral() {
+  console.log(facVisibleIndex);
+  if (facVisibleIndex === facImages.length - 1) {
+    facVisibleIndex = 0;
+  } else {
+    facVisibleIndex++;
+  }
+  console.log(facVisibleIndex);
+  newVisibility(facImages, facVisibleIndex);
+}
 
+//general carousel
+function backFn(arr, visindex) {
+  console.log(visindex);
+  if (visindex === 0) {
+    visindex = arr.length - 1;
+  } else {
+    visindex--;
+  }
+  console.log(visindex);
+  newVisibility(arr, visindex);
+  return visindex;
+}
+
+function nextFn(arr, visindex) {
+  console.log(visindex);
+  if (visindex === arr.length - 1) {
+    visindex = 0;
+  } else {
+    visindex++;
+  }
+  console.log(visindex);
+  newVisibility(arr, visindex);
+  return visindex;
+}
+
+/*
+//very specific
 facBackButton.addEventListener("click", backFacFn);
 facNextButton.addEventListener("click", nextFacFn);
+*/
 
+//very general with parameters & outside event
+facBackButton.addEventListener("click", () => { backFn(facImages, facVisibleIndex) });
+facNextButton.addEventListener("click", () => { nextFn(facImages, facVisibleIndex) });
+
+/*
+
+//very general
+facBackButton.addEventListener("click", backFn);
+facNextButton.addEventListener("click", nextFn);
+
+
+//very general with parameters
+facBackButton.addEventListener("click", backFn(facImages, facVisibleIndex));
+facNextButton.addEventListener("click", nextFn(facImages, facVisibleIndex));
+
+
+//with general helper function
+facBackButton.addEventListener("click", backFacFnGeneral);
+facNextButton.addEventListener("click", nextFacFnGeneral);
+
+//very general with parameters & outside event
+facBackButton.addEventListener("click", event => { backFn(facImages, facVisibleIndex) });
+facNextButton.addEventListener("click", event => { nextFn(facImages, facVisibleIndex) });
+
+*/
 
 
 /*
 //General
-function newVisibility(arr, x) {
+function newVisibility(arr, visindex) {
   arr.forEach((element, index) => {
-    if (index === x) {
+    if (index === visindex) {
       element.classList.remove("tile-hidden");
       element.classList.add("tile-visible");
     } else {
@@ -160,6 +248,6 @@ function nextFn(arr, x) {
   newVisibility(arr, x);
 }
 
-fccBackButton.addEventListener("click", backFn(fccImages, fccVisibleIndex));
-fccNextButton.addEventListener("click", nextFn(fccImages, fccVisibleIndex));
+facBackButton.addEventListener("click", backFn(facImages, facVisibleIndex));
+facNextButton.addEventListener("click", nextFn(facImages, facVisibleIndex));
 */
