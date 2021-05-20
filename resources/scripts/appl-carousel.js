@@ -1,21 +1,37 @@
+//Variables
+//Ideas Carousel
+const ideasImages = Array.from(document.getElementsByClassName("idea-tile"));
+const ideasBackButton = document.querySelector("#button-back-ideas");
+const ideasNextButton = document.querySelector("#button-next-ideas");
+let ideasVisibleIndex = 0;
+
 //FCC Carousel
-//variables
 const fccImages = Array.from(document.getElementsByClassName("fcc-tile"));
 const fccBackButton = document.querySelector("#button-back-fcc");
 const fccNextButton = document.querySelector("#button-next-fcc");
-
 let fccVisibleIndex = 0;
 
 //FAC Carousel
 const facImages = Array.from(document.getElementsByClassName("fac-tile"));
 const facBackButton = document.querySelector("#button-back-fac");
 const facNextButton = document.querySelector("#button-next-fac");
-
 let facVisibleIndex = 0;
-
 
 //Functions
 //new visibility
+//ideas
+function ideasNewVisibility() {
+  ideasImages.forEach((element, index) => {
+    if (index === ideasVisibleIndex) {
+      element.classList.remove("tile-hidden");
+      element.classList.add("tile-visible");
+    } else {
+      element.classList.remove("tile-visible");
+      element.classList.add("tile-hidden");
+    }
+  })
+}
+
 //fcc
 function fccNewVisibility() {
   fccImages.forEach((element, index) => {
@@ -43,6 +59,25 @@ function facNewVisibility() {
 }
 
 //each direction
+//ideas
+function backIdeasFn() {
+  if (ideasVisibleIndex === 0) {
+    ideasVisibleIndex = ideasImages.length - 1;
+  } else {
+    ideasVisibleIndex--;
+  }
+  ideasNewVisibility();
+}
+
+function nextIdeasFn() {
+  if (ideasVisibleIndex === ideasImages.length - 1) {
+    ideasVisibleIndex = 0;
+  } else {
+    ideasVisibleIndex++;
+  }
+  ideasNewVisibility();
+}
+
 //fcc
 function backFccFn() {
   if (fccVisibleIndex === 0) {
@@ -82,6 +117,8 @@ function nextFacFn() {
 }
 
 //Event Listeners
+ideasBackButton.addEventListener("click", backIdeasFn);
+ideasNextButton.addEventListener("click", nextIdeasFn);
 
 fccBackButton.addEventListener("click", backFccFn);
 fccNextButton.addEventListener("click", nextFccFn);
