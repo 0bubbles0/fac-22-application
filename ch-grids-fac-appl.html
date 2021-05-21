@@ -32,19 +32,19 @@
   <!--NAV-BAR-->
   <aside id="nav-bar" class="nav-bar sidebar">
     <nav class="nav-flex">
-      <a class="nav-link nav-hidden" href="#c-welcome"><img class="bubble-list"
+      <a class="nav-link no-mobile" href="#c-welcome"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Welcome</a>
-      <a class="nav-link nav-hidden" href="#c-intro"><img class="bubble-list"
+      <a class="nav-link no-mobile" href="#c-intro"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Background</a>
-      <a class="nav-link nav-hidden" href="#c-values"><img class="bubble-list"
+      <a class="nav-link no-mobile" href="#c-values"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Values</a>
-      <a class="nav-link nav-hidden" href="#c-ideas"><img class="bubble-list"
+      <a class="nav-link no-mobile" href="#c-ideas"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Ideas</a>
-      <a class="nav-link nav-hidden" href="#c-projects"><img class="bubble-list"
+      <a class="nav-link no-mobile" href="#c-projects"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Projects</a>
-      <a class="nav-link nav-hidden" href="#c-music"><img class="bubble-list"
+      <a class="nav-link no-mobile" href="#c-music"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">BeetBoot</a>
-      <a class="nav-link nav-hidden" href="#c-goals"><img class="bubble-list"
+      <a class="nav-link no-mobile" href="#c-goals"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Coding Goals</a>
       <a class="nav-link" href="#c-fac-appl"><img class="bubble-list" src="resources/img/logo/bubble-mini.png">fac</a>
       <a class="nav-link" href="#c-profiles"><img class="bubble-list"
@@ -58,11 +58,18 @@
       -->
     <!--Ch: Welcome-->
     <section id="c-welcome" class="chapter">
-      <h1>Welcome!</h1>
-      <h2>My name is <span class="p-bold p-bold-key">Barbara</span> (she/her)</h2>
-      <p>Some of my favourite <span class="p-bold">activities</span> are playing the violin, pub-quizzes and knitting
+      <h1 id="welc-h1">Welcome!</h1>
+      <h2 id="welc-h2-name">My name is <span class="p-bold p-bold-key">Barbara</span> (she/her)</h2>
+      <p id="welc-hobbies">Some of my favourite <span class="p-bold">activities</span> are playing the violin,
+        pub-quizzes and knitting
         (also: making lists).</p>
-      <p>Currently, I am working on becoming a <span class="p-bold p-bold-key">Web Developer</span>.</p>
+      <p id="welc-dev">Currently, I am working on becoming a <span class="p-bold p-bold-key">Web Developer</span>.</p>
+      <img id="welc-img-violin" class="img-deco no-mobile" src="resources/img/deco/violin-1.jpg" alt="violin">
+      <img id="welc-img-yarn" class="img-deco no-mobile" src="resources/img/deco/yes-yarn-balls-21-02-22.jpg"
+        alt="yarn">
+      <img id="welc-img-bubble-corner" class="img-deco no-mobile" src="resources/img/logo/bordure-right.png"
+        alt="bubble-corner">
+
     </section>
 
     <!--Ch: Background-->
@@ -317,6 +324,15 @@
             </div>
           </a>
 
+          <a class="project-tile card-style fac-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/oNZBVEK"
+            target="_blank">
+            <p class="project-name">4. Image Carousel</p>
+            <div class="project-tile-frame">
+              <img class="project-tile-img" src=""
+                onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+                alt="Tribute">
+            </div>
+          </a>
 
 
         </article>
@@ -326,6 +342,42 @@
     </section>
 
     <!--Ch: BeetBoot-->
+    <section id="c-music" class="chapter">
+      <h3 class="ch-header">Beethoven Bootcamp</h3>
+      <p>Covid-19 has been a lonely time for passionate amateur orchestra players (especially us thriving in the
+        second row)...</p>
+      <div class="ch-2col-left">
+        <h4>So what do you do when your fingers tingle and the feet tap a rhythm?</h4>
+        <form>
+          <h5>Step 1: Choose your <span class="p-bold">preferred key signature</span>:</h5>
+          <select id="beethoven-choices" name="beethoven-choices">
+            <option value="-4">&#9837;&#9837;&#9837;&#9837;</option>
+            <option value="-3">&#9837;&#9837;&#9837;</option>
+            <option value="-2">&#9837;&#9837;</option>
+            <option value="-1">&#9837;</option>
+            <option value="0" selected>&#9838;</option>
+            <option value="1">&#9839;</option>
+            <option value="2">&#9839;&#9839;</option>
+            <option value="3">&#9839;&#9839;&#9839;</option>
+            <option value="5">&#9839;&#9839;&#9839;&#9839;&#9839;</option>
+          </select>
+          <button id="beethoven-button">Shuffle</button>
+        </form>
+      </div>
+
+      <div class="ch-2col-right">
+        <h5>Step 2: Recommended movements
+          from <span class="p-bold">Beethoven
+            Symphonies</span>:</h5>
+        <h6>With links to <span class="p-bold">IMSLP</span> and <span class="p-bold">YouTube</span>
+          (please respect
+          copyright)</h6>
+        <ul id="beethoven-result-display" class="project-tile card-style">
+          <li>Play this</li>
+        </ul>
+      </div>
+
+    </section>
 
     <!--Ch: Goals-->
     <section id="c-goals" class="chapter">
@@ -335,13 +387,22 @@
         <h4><span class="p-bold">Improve</span> on:</h4>
         <ul>
           <li><span class="p-bold">Design</span> Creativity</li>
-          <li>Using <span class="p-bold">JavaScript</span> in real context:
+          <li>Using <span class="p-bold">JavaScript</span> in real context</li>
+          <li>How does a Pop-up work?</li>
+          </li>
+          <li>Using Terminal and <span class="p-bold">Version Control</span>
             <ul>
-              <li>How does a Pop-up work?</li>
+              <li>Return to previous versions</li>
+              <li>Use different branches</li>
             </ul>
           </li>
-          <li>Using Terminal and <span class="p-bold">Version Control</span></li>
-          <li><span class="p-bold">Collaboration</span> in conversation and on GitHub</li>
+          <li><span class="p-bold">Collaboration</span>
+            <ul>
+              <li>Plan Projects</li>
+              <li>Pair Programming</li>
+              <li>GitHub</li>
+            </ul>
+          </li>
         </ul>
       </div>
       <div class="ch-2col-right">
@@ -349,7 +410,11 @@
         <ul>
           <li>Standards for <span class="p-bold">Visual Design</span> & UX</li>
           <li>Standards for <span class="p-bold">Accessibility</span> and Assistive Technologies</li>
-          <li><span class="p-bold">Frameworks</span> (e.g. Bootstrap)</li>
+          <li><span class="p-bold">Frameworks</span>
+            <ul>
+              <li>Bootstrap</li>
+            </ul>
+          </li>
           <li><span class="p-bold">Libraries</span></li>
           <li><span class="p-bold">Databases</span></li>
           <li>Prepare for Coding <span class="p-bold">Interviews</span></li>
@@ -449,7 +514,7 @@
   </main>
 
   <footer class="page-footer">
-    <p>&#169; 2021 &lt;bubbles&gt;</p>
+    <p>Text, Images and Code by &#169; 2021 &lt;bubbles&gt;</p>
   </footer>
 
 </body>
