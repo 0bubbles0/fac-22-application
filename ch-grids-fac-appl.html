@@ -102,7 +102,7 @@
       </div>
 
       <div class="ch-2col-right">
-        <h4><span class="p-bold p-bold-key">Discovering Coding</span> through a random advert for the Google
+        <h4><span class="p-bold p-bold-key">Discovering Coding</span> through a coincidental advert for the Google
           Grasshopper
           app <span class="p-bold">felt</span>:</h4>
         <ul>
@@ -343,41 +343,51 @@
 
     <!--Ch: BeetBoot-->
     <section id="c-music" class="chapter">
-      <h3 class="ch-header">Beethoven Bootcamp</h3>
-      <p>Covid-19 has been a lonely time for passionate amateur orchestra players (especially us thriving in the
-        second row)...</p>
       <div class="ch-2col-left">
-        <h4>So what do you do when your fingers tingle and the feet tap a rhythm?</h4>
-        <form>
+        <h3 id="music-head" class="ch-header">Beethoven Bootcamp</h3>
+        <div id="music-intro">
+          <p id="music-p">Covid-19 has been a lonely time for passionate amateur orchestra players (especially us
+            thriving
+            in the
+            second row)...</p>
+          <h4 id="music-tease">So what do you do when your fingers tingle and the feet tap a rhythm?</h4>
+        </div>
+        <form id="music-form">
           <h5>Step 1: Choose your <span class="p-bold">preferred key signature</span>:</h5>
-          <select id="beethoven-choices" name="beethoven-choices">
-            <option value="-4">&#9837;&#9837;&#9837;&#9837;</option>
-            <option value="-3">&#9837;&#9837;&#9837;</option>
-            <option value="-2">&#9837;&#9837;</option>
+          <select id="beethoven-choices" class="button" name="beethoven-choices">
+            <option value="-4">&#9837; &#9837; &#9837; &#9837;</option>
+            <option value="-3">&#9837; &#9837; &#9837;</option>
+            <option value="-2">&#9837; &#9837;</option>
             <option value="-1">&#9837;</option>
             <option value="0" selected>&#9838;</option>
             <option value="1">&#9839;</option>
-            <option value="2">&#9839;&#9839;</option>
-            <option value="3">&#9839;&#9839;&#9839;</option>
-            <option value="5">&#9839;&#9839;&#9839;&#9839;&#9839;</option>
+            <option value="2">&#9839; &#9839;</option>
+            <option value="3">&#9839; &#9839; &#9839;</option>
+            <option value="5">&#9839; &#9839; &#9839; &#9839; &#9839;</option>
           </select>
-          <button id="beethoven-button">Shuffle</button>
+          <!--
+            <button id="beethoven-button" class="button">Shuffle</button>
+          -->
         </form>
       </div>
 
       <div class="ch-2col-right">
-        <h5>Step 2: Recommended movements
-          from <span class="p-bold">Beethoven
-            Symphonies</span>:</h5>
-        <h6>With links to <span class="p-bold">IMSLP</span> and <span class="p-bold">YouTube</span>
-          (please respect
-          copyright)</h6>
-        <ul id="beethoven-result-display" class="project-tile card-style">
-          <li>Play this</li>
-        </ul>
+        <div id="music-result-head">
+          <h5>Step 2: Recommended movements
+            from <span class="p-bold">Beethoven
+              Symphonies</span>:</h5>
+          <h6>With links to <span class="p-bold">IMSLP</span> and <span class="p-bold">YouTube</span>
+            (please respect
+            copyright)</h6>
+        </div>
+        <div id="music-result-container" class="project-tile card-style-non-hover">
+          <ul id="beethoven-result-display" class="card-list">
+            <li>Play this</li>
+          </ul>
+        </div>
       </div>
-
     </section>
+
 
     <!--Ch: Goals-->
     <section id="c-goals" class="chapter">
@@ -426,9 +436,9 @@
 
     <!--Ch: fac-->
     <section id="c-fac-appl" class="chapter">
-      <h3 class="ch-header">Why Founders and Coders</h3>
       <!--  <div class="ch-2col-parent"> -->
-      <div class="ch-3col-left">
+      <div class="ch-3col-middle">
+        <h3 class="ch-header">Why Founders and Coders</h3>
         <h4>The Structure of the Course and <span class="p-bold">Apprenticeship</span> would provide the invaluable:
         </h4>
         <ul>
@@ -445,7 +455,7 @@
         </ul>
       </div>
 
-      <div class="ch-3col-middle">
+      <div class="ch-3col-left">
         <h4>A place in this upcoming <span class="p-bold">Cohort 22 in Autumn 2021</span>:</h4>
         <ul>
           <li>Participating in the <span class="p-bold">Coaching Programme</span> has already felt like a Bootcamp.
