@@ -129,15 +129,25 @@
   grid-area: 1/1/span 1/ span 6;
   justify-self: center;
 }
-.ch-2col-left {grid-area: 2/1/span 3/span 3;}
-.ch-2col-right {grid-area: 2/4/span 3/span 3;}
+.ch-2col-left {grid-area: 2/1/span 3/span 3; }
+.ch-2col-right {grid-area: 2/4/span 3/span 3; }
 .ch-3col-left {grid-area: 2/1/span 3/span 2;}
 .ch-3col-middle {grid-area: 2/3/span 3/span 2;}
 .ch-3col-right {grid-area: 2/5/span 3/span 2;}
 
-/*Layout Welcome*/
+
+/*Help Colors*/
 /*
+.chapter { background-color: lightgreen;}
+.ch-header { background-color: lightsteelblue;}
+.ch-2col-left {background-color: lightpink;}
+.ch-2col-right { background-color: lightsteelblue;}
+.ch-3col-left { background-color: lightpink;}
+.ch-3col-middle { background-color: lightsteelblue;}
+.ch-3col-right {background-color: lightgoldenrodyellow;}
 */
+
+/*Layout Welcome*/
 #c-welcome {
   grid-gap: 0;
   grid-template-areas: 
@@ -203,6 +213,7 @@
   margin: 1em;
   padding: 0.5em;
 }
+#music-result-container {height: 50%;}
 .card-style, .card-style-non-hover {
   text-decoration: none;
   text-align: center;
