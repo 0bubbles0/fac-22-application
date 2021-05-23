@@ -23,9 +23,10 @@
 
 - [x] possible DOM ideas
 - [ ] Beethoven Bootcamp
-  - [ ] HTML&CSS: form-select, button, "Chalkboard" for results&links
+  - [x] HTML&CSS: form-select, button, "Chalkboard" for results&links
   - [x] Movement key-signatures
   - [x] Links
+  - [ ] **FIX eventListener**
 - [ ] ? Baking Converter
 
 #### Media
@@ -37,34 +38,35 @@
 
 #### Design
 
-- [ ] Page Layout
+- [x] Page Layout
 - [ ] Sizing, Space
 - [ ] Fonts
 - [ ] Colors: Palettes
-- [ ] Check my other fcc Projects
+- [x] Check my other fcc Projects
 - [x] Paper sketch
 
 ### Code
 
-- [ ] **HTML**
+- [x] **HTML**
   - [x] *Basics*
     - [x] Head
     - [x] Header: title, nav, nav-links
     - [x] Sections: Set up
     - [x] Footer
   - [x] Insert text
-  - [ ] Beethoven -> Form elements: select, button
+  - [x] Beethoven -> Form elements: select, button
 - [ ] **CSS**
-  - [ ] make variable & class names
+  - [x] make variable & class names
   - [x] set up basics
   - [ ] *OK Layout:*
-    - [ ] Basic page structure
+    - [x] Basic page structure
       - [x] Sidebar, main
       - [x] Footer
-    - [ ] Alignment, gaps
-    - [ ] Sizes
-    - [ ] Style DOM-Placeholder
+    - [x] Alignment, gaps
+    - [ ] **Sizes**
+    - [ ] **Style DOM-Placeholder**
     - [ ] Responsive?
+      - [ ] **element-heights on small devices**
     - [ ] Tidy up
   - [ ] *Design:*
     - [ ] Font families, sizes
@@ -72,10 +74,10 @@
     - [ ] Colours: palettes, relative
     - [ ] Tidy up
 - [ ] **JavaScript**
-  - [ ] Set up object: Symphony-No, Movement-No, Key-signature, imslp-link
-  - [ ] js variables, functions
-  - [ ] Access HTML-elements
-  - [ ] DOM Events, Listener
+  - [x] Set up object: Symphony-No, Movement-No, Key-signature, imslp-link
+  - [x] js variables, functions
+  - [ ] Access HTML-elements: **select-box**
+  - [ ] **DOM Events, Listener**
 
 ### Programs
 
@@ -85,7 +87,7 @@
 ### Test
 
 - [ ] **Myself**, other devices
-  - [ ] Privacy settings
+  - [x] Privacy settings
   - [ ] Layout, Sizes, Responsiveness
   - [ ] Colours
   - [ ] Functionality
