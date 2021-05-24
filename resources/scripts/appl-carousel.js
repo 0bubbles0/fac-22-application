@@ -189,10 +189,16 @@ facBackButton.addEventListener("click", backFacFn);
 facNextButton.addEventListener("click", nextFacFn);
 */
 
-//very general with parameters & outside event
-facBackButton.addEventListener("click", () => { backFn(facImages, facVisibleIndex) });
-facNextButton.addEventListener("click", () => { nextFn(facImages, facVisibleIndex) });
 
+//very general with parameters & outside event
+facBackButton.addEventListener("click", () => {
+  facVisibleIndex = backFn(facImages, facVisibleIndex);
+  // newVisibility(facImages, facVisibleIndex);
+});
+facNextButton.addEventListener("click", () => {
+  facVisibleIndex = nextFn(facImages, facVisibleIndex);
+  //  newVisibility(facImages, facVisibleIndex);
+});
 /*
 
 //very general
@@ -208,6 +214,7 @@ facNextButton.addEventListener("click", nextFn(facImages, facVisibleIndex));
 //with general helper function
 facBackButton.addEventListener("click", backFacFnGeneral);
 facNextButton.addEventListener("click", nextFacFnGeneral);
+
 
 //very general with parameters & outside event
 facBackButton.addEventListener("click", event => { backFn(facImages, facVisibleIndex) });
@@ -251,3 +258,7 @@ function nextFn(arr, x) {
 facBackButton.addEventListener("click", backFn(facImages, facVisibleIndex));
 facNextButton.addEventListener("click", nextFn(facImages, facVisibleIndex));
 */
+
+
+
+/*Old */

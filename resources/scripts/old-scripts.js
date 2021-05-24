@@ -5,43 +5,6 @@ myHeading.textContent = "Barbara's page";
 */
 
 //CAROUSELS
-
-//Functions
-//new visibility
-function newVisibility(arr, visindex) {
-  arr.forEach((element, index) => {
-    if (index === visindex) {
-      element.classList.remove("tile-hidden");
-      element.classList.add("tile-visible");
-    } else {
-      element.classList.remove("tile-visible");
-      element.classList.add("tile-hidden");
-    }
-  })
-}
-
-//each direction
-function backFn(arr, visindex) {
-  if (visindex === 0) {
-    visindex = arr.length - 1;
-  } else {
-    visindex--;
-  }
-  newVisibility(arr, visindex);
-  return visindex;
-}
-
-function nextFn(arr, visindex) {
-  if (visindex === arr.length - 1) {
-    visindex = 0;
-  } else {
-    visindex++;
-  }
-  newVisibility(arr, visindex);
-  return visindex;
-}
-
-
 //Variables
 //Ideas Carousel
 const ideasImages = Array.from(document.getElementsByClassName("idea-tile"));
@@ -61,31 +24,152 @@ const facBackButton = document.querySelector("#button-back-fac");
 const facNextButton = document.querySelector("#button-next-fac");
 let facVisibleIndex = 0;
 
+//Functions
+//new visibility
+//ideas
+function ideasNewVisibility() {
+  ideasImages.forEach((element, index) => {
+    if (index === ideasVisibleIndex) {
+      element.classList.remove("tile-hidden");
+      element.classList.add("tile-visible");
+    } else {
+      element.classList.remove("tile-visible");
+      element.classList.add("tile-hidden");
+    }
+  })
+}
+
+//fcc
+function fccNewVisibility() {
+  fccImages.forEach((element, index) => {
+    if (index === fccVisibleIndex) {
+      element.classList.remove("tile-hidden");
+      element.classList.add("tile-visible");
+    } else {
+      element.classList.remove("tile-visible");
+      element.classList.add("tile-hidden");
+    }
+  })
+}
+
+//fac
+function facNewVisibility() {
+  facImages.forEach((element, index) => {
+    if (index === facVisibleIndex) {
+      element.classList.remove("tile-hidden");
+      element.classList.add("tile-visible");
+    } else {
+      element.classList.remove("tile-visible");
+      element.classList.add("tile-hidden");
+    }
+  })
+}
+
+//each direction
+//ideas
+function backIdeasFn() {
+  if (ideasVisibleIndex === 0) {
+    ideasVisibleIndex = ideasImages.length - 1;
+  } else {
+    ideasVisibleIndex--;
+  }
+  ideasNewVisibility();
+}
+
+function nextIdeasFn() {
+  if (ideasVisibleIndex === ideasImages.length - 1) {
+    ideasVisibleIndex = 0;
+  } else {
+    ideasVisibleIndex++;
+  }
+  ideasNewVisibility();
+}
+
+//fcc
+function backFccFn() {
+  if (fccVisibleIndex === 0) {
+    fccVisibleIndex = fccImages.length - 1;
+  } else {
+    fccVisibleIndex--;
+  }
+  fccNewVisibility();
+}
+
+function nextFccFn() {
+  if (fccVisibleIndex === fccImages.length - 1) {
+    fccVisibleIndex = 0;
+  } else {
+    fccVisibleIndex++;
+  }
+  fccNewVisibility();
+}
+
+//fac
+function backFacFn() {
+  if (facVisibleIndex === 0) {
+    facVisibleIndex = facImages.length - 1;
+  } else {
+    facVisibleIndex--;
+  }
+  facNewVisibility();
+}
+
+function nextFacFn() {
+  if (facVisibleIndex === facImages.length - 1) {
+    facVisibleIndex = 0;
+  } else {
+    facVisibleIndex++;
+  }
+  facNewVisibility();
+}
 
 //Event Listeners
-ideasBackButton.addEventListener("click", () => {
-  ideasVisibleIndex = backFn(ideasImages, ideasVisibleIndex);
-});
-ideasNextButton.addEventListener("click", () => {
-  ideasVisibleIndex = nextFn(ideasImages, ideasVisibleIndex);
-});
+ideasBackButton.addEventListener("click", backIdeasFn);
+ideasNextButton.addEventListener("click", nextIdeasFn);
 
-fccBackButton.addEventListener("click", () => {
-  fccVisibleIndex = backFn(fccImages, fccVisibleIndex);
-});
-fccNextButton.addEventListener("click", () => {
-  fccVisibleIndex = nextFn(fccImages, fccVisibleIndex);
-});
+fccBackButton.addEventListener("click", backFccFn);
+fccNextButton.addEventListener("click", nextFccFn);
 
-facBackButton.addEventListener("click", () => {
-  facVisibleIndex = backFn(facImages, facVisibleIndex);
-});
-facNextButton.addEventListener("click", () => {
-  facVisibleIndex = nextFn(facImages, facVisibleIndex);
-});
+facBackButton.addEventListener("click", backFacFn);
+facNextButton.addEventListener("click", nextFacFn);
 
 
 
+/*
+//General
+function newVisibility(arr, x) {
+  arr.forEach((element, index) => {
+    if (index === x) {
+      element.classList.remove("tile-hidden");
+      element.classList.add("tile-visible");
+    } else {
+      element.classList.remove("tile-visible");
+      element.classList.add("tile-hidden");
+    }
+  })
+}
+
+function backFn(arr, x) {
+  if (x === 0) {
+    x = arr.length - 1;
+  } else {
+    x--;
+  }
+  newVisibility(arr, x);
+}
+
+function nextFn(arr, x) {
+  if (x === arr.length - 1) {
+    x = 0;
+  } else {
+    x++;
+  }
+  newVisibility(arr, x);
+}
+
+fccBackButton.addEventListener("click", backFn(fccImages, fccVisibleIndex));
+fccNextButton.addEventListener("click", nextFn(fccImages, fccVisibleIndex));
+*/
 
 //BEETHOVEN
 const catalogueBeethovenSym = {
