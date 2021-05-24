@@ -87,7 +87,7 @@ facNextButton.addEventListener("click", () => {
 
 
 
-//BEETHOVEN
+//BEETHOVEN: Sharps are +, Flats are -.
 const catalogueBeethovenSym = {
   "Symphony 1": {
     "1": [0],
@@ -170,26 +170,21 @@ const catalogueBeethovenSym = {
     "IMSLP": "https://imslp.org/wiki/Symphony_No.9_(Beethoven,_Ludwig_van)",
     "YouTube": "https://www.youtube.com/watch?v=gT91esZK90I"
   }
-
 }
 
-
-
+//Variables
 const dropBeet = document.getElementById("beethoven-choices");
-const buttonBeethoven = document.getElementById("beethoven-button");
-const displayFieldBeethoven = document.getElementById("beethoven-result-display");
-let desiredKey = -3;
+const buttonBeet = document.getElementById("beethoven-button");
+const displayFieldBeet = document.getElementById("beethoven-result-display");
 
+//Because "key" is a concept in either a JavaScript-object or a music-piece, I'll use "Vorz" for the music-context (abbreviation of German "Vorzeichen", i.e. number of accidentals).
+
+//Beethoven Functions
 function knowChosenVorz() {
-  let seeValue = dropBeet.value;
-  //console.log(seeValue);
-  let seeChosenValue = dropBeet.options[dropBeet.selectedIndex].value;
-  //console.log(seeChosenValue);
-  return seeChosenValue;
+  return parseInt(dropBeet.value);
 }
 
-//Practice 01:00
-function returnMatches(ctlg, desiredvorz) {
+function returnMatches(ctlg, choice) {
   let allMatches = "";
   for (let opus in ctlg) {
     //  console.log(opus);
@@ -200,39 +195,30 @@ function returnMatches(ctlg, desiredvorz) {
       let mvtAllVorz = ctlg[opus][mvt];
       //     console.log(testVorz);
       for (let vorz in mvtAllVorz) {
-        if (mvtAllVorz[vorz] === desiredvorz) {
+        if (mvtAllVorz[vorz] === choice) {
           //       console.log(opus + ", " + mvt);
           rightMvtsArr.push(mvt);
+          console.log(rightMvtsArr);
         }
       }
     }
     if (rightMvtsArr.length !== 0) {
       let rightMvtsStr = rightMvtsArr.join(", ");
-      let imslpURL = ctlg[opus]["IMSLP"];
-      let ytURL = ctlg[opus]["YouTube"];
+      let plural;
+      if (rightMvtsArr.length === 1) {
+        plural = "";
+      } else if (rightMvtsArr.length >= 1) {
+        plural = "s";
+      }
       let imslpText = `<a target="_blank" href="${ctlg[opus]["IMSLP"]}" title="Sheet Music">&#119070;</a>`;
-      let ytText = `<a target="_blank" href="${ytURL}" title="Listen">&#128362;</a>`;
-      let message1 = `<li>${opus} - Mvt: ${rightMvtsStr} - ${imslpText} or ${ytText}</li>`;
-      //console.log(message1);
-      allMatches += message1;
+      let ytText = `<a target="_blank" href="${ctlg[opus]["YouTube"]}" title="Listen">&#128362;</a>`;
+      let message = `<li>${opus} - Movement${plural} ${rightMvtsStr} - ${imslpText} or ${ytText}</li>`;
+      allMatches += message;
     }
   }
-  return displayFieldBeethoven.innerHTML = allMatches;
+  return displayFieldBeet.innerHTML = allMatches;
 }
 
-
-returnMatches(catalogueBeethovenSym, desiredKey)
-/*
-console.log("h");
-
-buttonBeethoven.addEventListener("click", () => {
-  let wantedVorz = knowChosenVorz();
-  dropBeet.value = wantedVorz;
-});
-
 dropBeet.addEventListener("change", () => {
-  let desiredVorz = knowChosenVorz();
-  console.log(desiredVorz);
   returnMatches(catalogueBeethovenSym, knowChosenVorz());
 });
-  */

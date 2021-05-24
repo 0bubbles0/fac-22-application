@@ -292,13 +292,26 @@ function returnMatches(ctlg, desiredvorz) {
     }
     if (rightMvtsArr.length !== 0) {
       let rightMvtsStr = rightMvtsArr.join(", ");
-      let imslpURL = ctlg[opus]["IMSLP"];
-      let ytURL = ctlg[opus]["YouTube"];
+      let plural;
+      if (rightMvtsArr.length === 1) {
+        plural = "";
+      } else if (rightMvtsArr.length >= 1) {
+        plural = "s";
+      }
+      //      let imslpURL = ctlg[opus]["IMSLP"];
+      //    let ytURL = ctlg[opus]["YouTube"];
       let imslpText = `<a target="_blank" href="${ctlg[opus]["IMSLP"]}" title="Sheet Music">&#119070;</a>`;
-      let ytText = `<a target="_blank" href="${ytURL}" title="Listen">&#128362;</a>`;
-      let message1 = `<li>${opus} - Mvt: ${rightMvtsStr} - ${imslpText} or ${ytText}</li>`;
+      let ytText = `<a target="_blank" href="${ctlg[opus]["YouTube"]}" title="Listen">&#128362;</a>`;
+      /*
+         let message;
+         if (rightMvtsArr.length === 1) {
+           message = `<li>${opus} - Movement ${rightMvtsStr} - ${imslpText} or ${ytText}</li>`;
+         } else if (rightMvtsArr.length >= 1) {
+         }
+         */
+      let message = `<li>${opus} - Movement${plural} ${rightMvtsStr} - ${imslpText} or ${ytText}</li>`;
       //console.log(message1);
-      allMatches += message1;
+      allMatches += message;
     }
   }
   return displayFieldBeethoven.innerHTML = allMatches;
