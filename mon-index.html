@@ -10,26 +10,27 @@
     <meta name="keywords" content="fac html">
     <meta name="author" content="0bubbles0">
 
-    <title>Tue FAC-22 Application Barbara</title>
-    <link rel="stylesheet" type="text/css" href="resources/styles/tue-layout.css">
+    <title>FAC-22 Application Barbara</title>
+    <link rel="stylesheet" type="text/css" href="resources/styles/ch-grids-fac-appl.css">
     <!--Icons Font Awesome 4-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="resources/scripts/tue-layout.js" defer></script>
+    <script src="resources/scripts/fac-appl.js" defer></script>
   </head>
 
 <body class="page-full">
-  <!--Logo-bar-->
-  <header class="logo-bar">
-    <img class="logo-img" src="resources/img/logo/logo1-250-100.png">
-    <h3 id="logo-bar-title" class="logo-bar-title">Title</h3>
+
+  <!--LOGO-BAR-->
+  <header id="logo-bar" class="logo-bar sidebar">
+    <img class="nav-logo" src="resources/img/logo/logo1-250-100.png">
     <!-- 
+    <p id="logo-bar-title" class="logo-bar-title">Title</p>
     <div class="profile-icons"></div>
     -->
     <button class="button button-surprise" id="button-surprise">Surprise!</button>
   </header>
 
-  <!--Nav-bar-->
-  <aside class="nav-bar">
+  <!--NAV-BAR-->
+  <aside id="nav-bar" class="nav-bar sidebar">
     <nav class="nav-flex">
       <a class="nav-link no-mobile" href="#c-welcome"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Welcome</a>
@@ -51,25 +52,32 @@
     </nav>
   </aside>
 
-  <main class="page-content">
-    <!--Welcome-->
-    <section id="c-welcome" class="chapter-creative">
+  <main id="main" class="page-content">
+
+    <!--
+      -->
+    <!--Ch: Welcome-->
+    <section id="c-welcome" class="chapter">
       <h1 id="welc-h1">Welcome!</h1>
       <h2 id="welc-h2-name">My name is <span class="p-bold p-bold-key">Barbara</span> (she/her)</h2>
       <p id="welc-hobbies">Some of my favourite <span class="p-bold">activities</span> are playing the violin,
-        pub-quizzes and knitting (also: making lists).</p>
+        pub-quizzes and knitting
+        (also: making lists).</p>
       <p id="welc-dev">Currently, I am working on becoming a <span class="p-bold p-bold-key">Web Developer</span>.</p>
-      <img id="welc-img-violin" class="creative-img" src="resources/img/deco/violin-1.jpg" alt="violin">
-      <img id="welc-img-yarn" class="creative-img no-mobile" src="resources/img/deco/yes-yarn-balls-21-02-22.jpg"
+      <img id="welc-img-violin" class="img-deco no-mobile" src="resources/img/deco/violin-1.jpg" alt="violin">
+      <img id="welc-img-yarn" class="img-deco no-mobile" src="resources/img/deco/yes-yarn-balls-21-02-22.jpg"
         alt="yarn">
-      <img id="welc-img-bubble-corner" class="creative-img no-mobile" src="resources/img/logo/bordure-right.png"
+      <img id="welc-img-bubble-corner" class="img-deco no-mobile" src="resources/img/logo/bordure-right.png"
         alt="bubble-corner">
+
     </section>
 
-    <!--Background-->
-    <section id="c-intro" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Background</h3>
-      <div class="chapter-stack-column">
+    <!--Ch: Background-->
+    <section id="c-intro" class="chapter">
+      <h3 class="ch-header">Background</h3>
+
+      <!--   <div class="ch-2col-parent"> -->
+      <div class="ch-2col-left">
         <h4>During the studies for my <span class="p-bold p-bold-key">BSc Economics at SOAS, University of London
           </span>
           (School
@@ -92,7 +100,8 @@
               open-minded dialogue</span>.</li>
         </ul>
       </div>
-      <div class="chapter-stack-column">
+
+      <div class="ch-2col-right">
         <h4><span class="p-bold p-bold-key">Discovering Coding</span> through a coincidental advert for the Google
           Grasshopper
           app <span class="p-bold">felt</span>:</h4>
@@ -106,12 +115,15 @@
           <li>Like a path to get my life <span class="p-bold">unstuck</span> from a few lost years.</li>
         </ul>
       </div>
+      <!--      </div> -->
     </section>
 
-    <!--Values-->
-    <section id="c-values" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Personal Values</h3>
-      <div class="chapter-stack-column">
+    <!--Ch: Values-->
+    <section id="c-values" class="chapter">
+      <h3 class="ch-header">Personal Values</h3>
+      <!--  <div class="ch-2col-parent"> -->
+      <div class="ch-2col-left">
+
         <h4>Through improving my <span class="p-bold">coding skills</span>, I hope to:</h4>
         <ul>
           <li>Contribute in preparing us for a <span class="p-bold">better future</span>.</li>
@@ -122,9 +134,10 @@
             <span class="p-bold">“good tech”</span>.
           </li>
         </ul>
-      </div>
 
-      <div class="chapter-stack-column">
+      </div>
+      <div class="ch-2col-right">
+
         <h4>I wish to contribute to technology that <span class="p-bold">enables people to thrive</span> and is:</h4>
         <ul>
           <li><span class="p-bold">Accessible & Inclusive:</span> affordable/free, proactively non-biased, open to all
@@ -146,15 +159,16 @@
             communities.
           </li>
         </ul>
+
       </div>
+      <!--     </div> -->
     </section>
 
-    <!--Ideas-->
-    <section id="c-ideas" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Ideas</h3>
-      <div class="chapter-stack-column column-low">
-        <h4>If I could learn the coding skills to <span class="p-bold">solve 4 life problems</span> through apps...
-        </h4>
+    <!--Ch: Ideas-->
+    <section id="c-ideas" class="chapter">
+      <h3 class="ch-header">Ideas</h3>
+      <div class="ch-2col-left">
+        <h4>If I could learn the coding skills to <span class="p-bold">solve 4 life problems</span> through apps...</h4>
         <ul>
           <li>All available for free, because £1 can be an access barrier.</li>
           <li>Information provided by certified professionals in the relevant fields.</li>
@@ -162,10 +176,10 @@
           <li>Guaranteed data protection – this is tech to serve its users, not exploit them.</li>
         </ul>
       </div>
-
-      <div class="chapter-stack-column carousel-grid">
+      <div class="ch-2col-right carousel-grid">
         <article class="carousel-item-container" id="carousel-ideas">
-          <article class="project-tile idea-tile tile-visible">
+
+          <article class="project-tile card-style-non-hover idea-tile tile-visible">
             <h6 class="project-name">1. Live healthier</h6>
             <ul class="card-list">
               <li>For <span class="p-bold">healthier habits</span> with nutrition, exercise & sleep</li>
@@ -175,8 +189,7 @@
               <li>Potential link-up with your GP/nutritionist.</li>
             </ul>
           </article>
-
-          <article class="project-tile idea-tile tile-hidden">
+          <article class="project-tile card-style-non-hover idea-tile tile-hidden">
             <h6 class="project-name">2. Private Tutor Bot</h6>
             <ul class="card-list">
               <li>School Lessons as fun as gaming</li>
@@ -187,7 +200,7 @@
             </ul>
           </article>
 
-          <article class="project-tile idea-tile tile-hidden">
+          <article class="project-tile card-style-non-hover idea-tile tile-hidden">
             <h6 class="project-name">3. Neighbourhood Errands</h6>
             <ul class="card-list">
               <li><span class="p-bold">Volunteer Uber</span></li>
@@ -198,7 +211,7 @@
             </ul>
           </article>
 
-          <article class="project-tile idea-tile tile-hidden">
+          <article class="project-tile card-style-non-hover idea-tile tile-hidden">
             <h6 class="project-name">4. Personal Safety</h6>
             <ul class="card-list">
               <li><span class="p-bold">Call 999 via safe word</span></li>
@@ -207,114 +220,141 @@
               <li>Depending on legality: record GPS location, start audio-recording for evidence</li>
             </ul>
           </article>
+
         </article>
-        <button class="button-car button-car-back" id="button-back-ideas">&#9664;</button>
-        <button class="button-car button-car-next" id="button-next-ideas">&#9654;</button>
+        <button class="button button-car button-car-back" id="button-back-ideas">&#9664;</button>
+        <button class="button button-car button-car-next" id="button-next-ideas">&#9654;</button>
       </div>
     </section>
 
-    <!--Projects-->
-    <section id="c-projects" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Completed Projects</h3>
-      <div class="chapter-stack-column carousel-grid">
+    <!--Ch: Projects-->
+    <section id="c-projects" class="chapter">
+      <h3 class="ch-header">Completed Projects</h3>
+      <div class="ch-2col-left carousel-grid">
         <h4 class="carousel-head"><span class="p-bold">HTML & CSS</span></h4>
         <h5 class="carousel-subhead">FreeCodeCamp "Responsive Web Design"</h5>
         <article class="carousel-item-container" id="carousel-fcc">
 
-          <a class="project-tile fcc-tile tile-visible" href="https://codepen.io/0Bubbles0/full/mdPXbQr"
+          <a class="project-tile card-style fcc-tile tile-visible" href="https://codepen.io/0Bubbles0/full/mdPXbQr"
             target="_blank">
             <h6 class="project-name">1. Tribute Page</h6>
-            <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/01-tribute.png"
-              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/projects/ffx-small-21may/01-tribute.png'"
-              alt="Tribute">
+            <div class="project-tile-frame">
+              <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/01-tribute.png"
+                onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+                alt="Tribute">
+            </div>
+            <!--
+          -->
           </a>
 
-          <a class="project-tile fcc-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/xxRrgeo "
+          <a class="project-tile card-style fcc-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/xxRrgeo "
             target="_blank">
-            <h6 class="project-name">2. Survry Form</h6>
-            <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/02-form.png"
-              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/projects/ffx-small-21may/02-form.png'"
-              alt="Form">
+            <h6 class="project-name">2. Form</h6>
+            <div class="project-tile-frame">
+              <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/02-form.png"
+                onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/2-form.png'"
+                alt="Form">
+            </div>
           </a>
-
-          <a class="project-tile fcc-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/VwmxgWq "
+          <a class="project-tile card-style fcc-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/VwmxgWq "
             target="_blank">
             <h6 class="project-name">3. Product Landing Page</h6>
-            <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/03-landing.png"
-              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/projects/ffx-small-21may/03-landing.png'"
-              alt="Product Landing">
+            <div class="project-tile-frame">
+              <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/03-landing.png"
+                onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/3-landing.png'"
+                alt="Product Landing">
+            </div>
           </a>
-
-          <a class="project-tile fcc-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/mdOLvqZ "
+          <a class="project-tile card-style fcc-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/mdOLvqZ "
             target="_blank">
             <h6 class="project-name">4. Technical Documentation</h6>
-            <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/04-docu.png"
-              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/projects/ffx-small-21may/04-docu.png'"
-              alt="Documentation">
+            <div class="project-tile-frame">
+              <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/04-docu.png"
+                onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/4-docu.png'"
+                alt="Documentation">
+            </div>
+          </a>
+          <a class="project-tile card-style fcc-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/bGBmQVP"
+            target="_blank">
+            <h6 class="project-name">5. Portfolio</h6>
+            <div class="project-tile-frame">
+              <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/05-pfolio.png"
+                onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+                alt="Portfolio">
+            </div>
           </a>
 
-          <a class="project-tile fcc-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/bGBmQVP" target="_blank">
-            <h6 class="project-name">5. Portfolio</h6>
-            <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/05-pfolio.png"
-              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/projects/ffx-small-21may/05-pfolio.png'"
-              alt="Portfolio">
-          </a>
+
         </article>
-        <button class="button-car button-car-back" id="button-back-fcc">&#9664;</button>
-        <button class="button-car button-car-next" id="button-next-fcc">&#9654;</button>
+        <button class="button button-car button-car-back" id="button-back-fcc">&#9664;</button>
+        <button class="button button-car button-car-next" id="button-next-fcc">&#9654;</button>
       </div>
 
-
-      <div class="chapter-stack-column carousel-grid">
+      <div class="ch-2col-right carousel-grid">
         <h4 class="carousel-head"><span class="p-bold">HTML & CSS & JavaScript</span></h4>
         <h5 class="carousel-subhead">Founders & Coders Coaching Workshops</h5>
         <article class="carousel-item-container" id="carousel-fac">
 
-          <a class="project-tile fac-tile tile-visible" href="https://codepen.io/0Bubbles0/full/JjEzqLX"
+          <a class="project-tile card-style fac-tile tile-visible" href="https://codepen.io/0Bubbles0/full/JjEzqLX"
             target="_blank">
             <h6 class="project-name">1. Tribute Page</h6>
+            <!-- <div class="project-tile-frame"> -->
             <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/11-tribute.png"
-              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/projects/ffx-small-21may/11-tribute.png'"
+              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
               alt="Tribute">
+            <!--</div> -->
           </a>
 
-          <a class="project-tile fac-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/xxgypQd" target="_blank">
+          <a class="project-tile card-style fac-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/xxgypQd"
+            target="_blank">
             <p class="project-name">2. DOM Events</p>
-            <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/12-events.png"
-              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/projects/ffx-small-21may/12-events.png'"
-              alt="Dom Events">
+            <div class="project-tile-frame">
+              <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/12-events.png"
+                onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+                alt="Dom Events">
+            </div>
           </a>
-
-          <a class="project-tile fac-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/zYZvbQp" target="_blank">
+          <a class="project-tile card-style fac-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/zYZvbQp"
+            target="_blank">
             <p class="project-name">3. Button Calculator</p>
-            <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/13-button-calc.png"
-              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/projects/ffx-small-21may/13-button-calc.png'"
-              alt="Button Calculator">
+            <div class="project-tile-frame">
+              <img class="project-tile-img" src="resources/img/projects/ffx-small-21may/13-button-calc.png"
+                onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+                alt="Button Calculator">
+            </div>
           </a>
 
-          <a class="project-tile fac-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/oNZBVEK" target="_blank">
+          <a class="project-tile card-style fac-tile tile-hidden" href="https://codepen.io/0Bubbles0/full/oNZBVEK"
+            target="_blank">
             <p class="project-name">4. Image Carousel</p>
-            <img class="project-tile-img" src="ffx-small-21may/"
-              onerror="this.src='https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/projects/ffx-small-21may/14-carousel.png'"
-              alt="Image Carousel">
+            <div class="project-tile-frame">
+              <img class="project-tile-img" src="ffx-small-21may/"
+                onerror="this.src='https://raw.githubusercontent.com/0bubbles0/media/main/fcc-html/img/5-project-thumbs/screenshots-ffox-vwport/1-tribute.png'"
+                alt="Image Carousel">
+            </div>
           </a>
+
 
         </article>
-        <button class="button-car button-car-back" id="button-back-fac">&#9664;</button>
-        <button class="button-car button-car-next" id="button-next-fac">&#9654;</button>
+        <button class="button button-car button-car-back" id="button-back-fac">&#9664;</button>
+        <button class="button button-car button-car-next" id="button-next-fac">&#9654;</button>
       </div>
     </section>
-    <!--Beethoven-->
-    <section id="c-music" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Beethoven Bootcamp</h3>
-      <div class="chapter-stack-column column-low">
-        <p id="music-p">Covid-19 has been a lonely time for passionate amateur orchestra players (especially us
-          thriving
-          in the second row)...</p>
-        <h4 id="music-tease">So what do you do when your fingers tingle and the feet tap a rhythm?</h4>
+
+    <!--Ch: BeetBoot-->
+    <section id="c-music" class="chapter">
+      <div class="ch-2col-left">
+        <h3 id="music-head" class="ch-header">Beethoven Bootcamp</h3>
+        <div id="music-intro">
+          <p id="music-p">Covid-19 has been a lonely time for passionate amateur orchestra players (especially us
+            thriving
+            in the
+            second row)...</p>
+          <h4 id="music-tease">So what do you do when your fingers tingle and the feet tap a rhythm?</h4>
+        </div>
         <form id="music-form">
           <h5>Step 1: Choose your <span class="p-bold">preferred key signature</span>:</h5>
-          <select id="beethoven-choices" class="" name="beethoven-choices">
+          <select id="beethoven-choices" class="button" name="beethoven-choices">
             <option value="-4">&#9837; &#9837; &#9837; &#9837;</option>
             <option value="-3">&#9837; &#9837; &#9837;</option>
             <option value="-2">&#9837; &#9837;</option>
@@ -326,27 +366,34 @@
             <option value="5">&#9839; &#9839; &#9839; &#9839; &#9839;</option>
           </select>
           <!--
-          <button id="beethoven-button" class="button">Shuffle</button>
-        -->
+            <button id="beethoven-button" class="button">Shuffle</button>
+          -->
         </form>
-        <h5>Step 2: Recommended movements from <span class="p-bold">Beethoven Symphonies</span>:</h5>
-        <p>With links to <span class="p-bold">IMSLP</span> and <span class="p-bold">YouTube</span>
-          (please respect copyright)</p>
       </div>
-      <div class="chapter-stack-column column-low">
-        <!--<div id="music-result-container" class="project-tile">-->
-        <ul id="beethoven-result-display" class="project-tile">
-          <!-- <li>Play this</li>-->
-        </ul>
-        <!--</div>-->
+
+      <div class="ch-2col-right">
+        <div id="music-result-head">
+          <h5>Step 2: Recommended movements
+            from <span class="p-bold">Beethoven
+              Symphonies</span>:</h5>
+          <p>With links to <span class="p-bold">IMSLP</span> and <span class="p-bold">YouTube</span>
+            (please respect
+            copyright)</p>
+        </div>
+        <div id="music-result-container" class="project-tile card-style-non-hover">
+          <ul id="beethoven-result-display" class="card-list">
+            <!-- <li>Play this</li>-->
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!--Coding Goals-->
-    <section id="c-goals" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Coding Goals</h3>
-      <div class="chapter-stack-column">
-        <h4>What I hope to work on next</h4>
+
+    <!--Ch: Goals-->
+    <section id="c-goals" class="chapter">
+      <h3 class="ch-header">Coding Goals: What I hope to work on next</h3>
+      <!--  <div class="ch-2col-parent"> -->
+      <div class="ch-2col-left">
         <h4><span class="p-bold">Improve</span> on:</h4>
         <ul>
           <li><span class="p-bold">Design</span> Creativity</li>
@@ -368,7 +415,7 @@
           </li>
         </ul>
       </div>
-      <div class="chapter-stack-column">
+      <div class="ch-2col-right">
         <h4><span class="p-bold">New</span> skills:</h4>
         <ul>
           <li>Standards for <span class="p-bold">Visual Design</span> & UX</li>
@@ -386,10 +433,12 @@
       </div>
     </section>
 
-    <!--fac-->
-    <section id="c-fac-appl" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Why Founders and Coders</h3>
-      <div class="chapter-stack-column column-tall">
+
+    <!--Ch: fac-->
+    <section id="c-fac-appl" class="chapter">
+      <!--  <div class="ch-2col-parent"> -->
+      <div class="ch-3col-middle">
+        <h3 class="ch-header">Why Founders and Coders</h3>
         <h4>The Structure of the Course and <span class="p-bold">Apprenticeship</span> would provide the invaluable:
         </h4>
         <ul>
@@ -405,7 +454,8 @@
             would enjoy.</li>
         </ul>
       </div>
-      <div class="chapter-stack-column column-tall">
+
+      <div class="ch-3col-left">
         <h4>A place in this upcoming <span class="p-bold">Cohort 22 in Autumn 2021</span>:</h4>
         <ul>
           <li>Participating in the <span class="p-bold">Coaching Programme</span> has already felt like a Bootcamp.
@@ -428,12 +478,11 @@
             partners.</li>
         </ul>
       </div>
-      <div class="chapter-stack-column column-tall">
+      <div class="ch-3col-right">
         <h4>To continue as part of the <span class="p-bold">community</span>:</h4>
         <ul>
           <li>It felt <span class="p-bold">safe</span> to be invited to an environment that values <span
-              class="p-bold">mutual supportiveness</span> over competitiveness. Collaborating with people with
-            different
+              class="p-bold">mutual supportiveness</span> over competitiveness. Collaborating with people with different
             life experiences is an opportunity to learn, not a complication!</li>
           <li>The special emphasis on <span class="p-bold">pastoral care</span> and <span
               class="p-bold">respectful</span> and encouraging communication has made a lasting impact on
@@ -450,8 +499,8 @@
       </div>
     </section>
 
-    <!--Profiles-->
-    <section id="c-profiles" class="chapter-creative">
+    <!--Ch: Profiles-->
+    <section id="c-profiles" class="chapter chapter-profiles">
       <h3 class="ch-profiles-header">Profiles</h3>
 
       <h4 class="ch-profiles-intro">Thank you for reading my story and considering my application to the upcoming
@@ -472,14 +521,11 @@
           class="fa fa-pencil-square-o"></i>Repl.it</a>
     </section>
 
-
   </main>
 
-  <!--Footer-->
   <footer class="page-footer">
     <p>Text, Images and Code by &#169; 2021 &lt;bubbles&gt;</p>
   </footer>
-
 
 </body>
 
