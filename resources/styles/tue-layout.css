@@ -198,6 +198,7 @@ ul {
 }
 #beethoven-result-display {
   height: 50vh;
+  padding: 2vh 4vw;
 }
 /*
 */
@@ -364,7 +365,7 @@ ul {
     "fcc pen"
     "wars repl";
   }
-  .ch-profiles-header { justify-self: center;}
+  .ch-profiles-header { justify-self: center; margin: 0 auto;}
 }
 
 @media only screen and (max-width: 600px) {
