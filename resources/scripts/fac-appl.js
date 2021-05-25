@@ -222,3 +222,4 @@ function returnMatches(ctlg, choice) {
 dropBeet.addEventListener("change", () => {
   returnMatches(catalogueBeethovenSym, knowChosenVorz());
 });
+

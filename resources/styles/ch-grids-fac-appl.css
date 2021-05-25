@@ -1,6 +1,7 @@
 
 /*General*/
-@import url('resources\img\logo\bubble-mini.png');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 :root {
   --logo-color:	#004f70;
@@ -302,7 +303,11 @@
 }
 /*DESIGN*/
 /*Design General*/
-body{  background-color: var(--bground-color);}
+body{  
+  background-color: var(--bground-color);
+  font-family: "Roboto", Helvetica, sans-serif;
+  line-height: 1.8;
+}
 
 .button{
   background-color: var(--logo-color);
@@ -313,6 +318,8 @@ body{  background-color: var(--bground-color);}
 }
 .button-car {
   border-radius: 50%;
+  color: var(--logo-color);
+  background: none;
 }
 .button:hover {opacity: 0.5; cursor: pointer;}
 .button-surprise{
@@ -320,7 +327,8 @@ body{  background-color: var(--bground-color);}
 }
 
 ul {
-  list-style: disc inside url(https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/logo/bubble-mini-15.png);
+  list-style: disc outside url(https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/logo/bubble-mini-13.png);
+  text-align: justify;
   /*
   list-style: disc inside url(https://raw.githubusercontent.com/0bubbles0/fac-22-application/d91fce4d16d5b1abbf4da2de8e95c1721932a043/resources/img/logo/bubble-mini-10.png);
   list-style: disc inside url(https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/logo/bubble-mini.png);
