@@ -308,7 +308,13 @@ body{
   font-family: "Roboto", Helvetica, sans-serif;
   line-height: 1.8;
 }
-
+h1, h2, h3, h6 {
+  font-family: "Courgette", Helvetica, sans-serif;
+  font-size: larger;
+  /*
+  color: var(--side-color);
+  */
+}
 .button{
   background-color: var(--logo-color);
   color: var(--side-color);
