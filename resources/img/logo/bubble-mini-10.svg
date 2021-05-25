@@ -1,0 +1,27 @@
+<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d)">
+<ellipse cx="9" cy="4.78261" rx="5" ry="4.78261" fill="url(#paint0_linear)" style="mix-blend-mode:darken"/>
+</g>
+<ellipse rx="1.04962" ry="0.527675" transform="matrix(-0.879558 0.475792 -0.551995 -0.833847 7.01453 2.08674)" fill="url(#paint1_radial)"/>
+<defs>
+<filter id="filter0_d" x="0" y="0" width="18" height="17.5652" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear" x1="5.95" y1="1.33913" x2="13.0028" y2="9.16089" gradientUnits="userSpaceOnUse">
+<stop stop-color="#004F70" stop-opacity="0.36"/>
+<stop offset="0.338542" stop-color="#004F70" stop-opacity="0.81"/>
+<stop offset="0.640625" stop-color="#004F70" stop-opacity="0.99"/>
+</linearGradient>
+<radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1.04153 0.515146) rotate(143.138) scale(0.793766 0.914869)">
+<stop stop-color="white"/>
+<stop offset="0.526042" stop-color="white"/>
+<stop offset="0.9375" stop-color="#B4C2CE"/>
+</radialGradient>
+</defs>
+</svg>

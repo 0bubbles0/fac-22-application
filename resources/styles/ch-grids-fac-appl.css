@@ -320,7 +320,12 @@ body{  background-color: var(--bground-color);}
 }
 
 ul {
-  list-style-image: url('resources\img\logo\bubble-mini.jpg');
+  list-style: disc inside url(https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/logo/bubble-mini.png);
+  /*
+  list-style-image: url(https://raw.githubusercontent.com/0bubbles0/fac-22-application/main/resources/img/logo/bubble-mini.png);
+  list-style-image: url(resources\img\logo\bubble-mini.jpg);
+  */
+  
 }
 
 .bubble-list {
