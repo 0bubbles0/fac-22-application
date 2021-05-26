@@ -44,7 +44,7 @@
     - [ ] user can submit new entries to database --> need a way to verify if information is correct
 - [ ] ? Baking measurements Converter (cups vs grams)
 - [ ] **Surprise button**
-- [ ] Recognise "current" chapter --> Heading in top-bar, highlight nav, active/hidden class
+- [x] Recognise "current" chapter --> Heading in top-bar, highlight nav, active/hidden class
 
 #### Media
 
@@ -58,9 +58,9 @@
 #### Design
 
 - [x] Page Layout
-- [ ] Sizing, Space
-- [ ] Fonts
-- [ ] Colors: Palettes
+- [x] Sizing, Space
+- [x] Fonts
+- [x] Colors: Palettes
 - [x] Check my other fcc Projects
 - [x] Paper sketch
 
@@ -82,10 +82,10 @@
       - [x] Sidebar, main
       - [x] Footer
     - [x] Alignment, gaps
-    - [ ] **Sizes**
-    - [ ] **Style DOM-Placeholder**
+    - [x] **Sizes**
+    - [x] **Style DOM-Placeholder**
     - [ ] Responsive?
-      - [ ] **element-heights on small devices**
+      - [x] **element-heights on small devices**
     - [ ] Tidy up
   - [ ] *Design:*
     - [ ] Font families, sizes
@@ -98,7 +98,7 @@
   - [x] Access HTML-elements: **select-box**
   - [x] **DOM Events, Listener**
   - [ ] Surprise-button
-  - [ ] Section-heading in logo-bar?
+  - [x] Section-heading in logo-bar?
 
 ### Programs
 
@@ -114,6 +114,6 @@
   - [ ] Functionality
 - [ ] **Ask:**
   - [ ] Questions, Problems
-  - [ ] Feedback
+  - [x] Feedback
   - [ ] Does Hosting work?
 

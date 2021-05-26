@@ -56,6 +56,13 @@ function updateCurrentNav(link) {
   return newNavFocus(linkArr, x);
 }
 
+function allChaptersVisAllNavCurrent(arr) {
+  arr.forEach((element, index) => {
+    element.classList.remove("tile-hidden");
+    element.classList.remove("nav-link-focus");
+  });
+}
+
 function updateLogoBarTitle(link) {
   let x = knowChapterIndex(link);
   let y = chapterHeadingsArr[x].innerHTML;
@@ -63,15 +70,22 @@ function updateLogoBarTitle(link) {
 }
 
 function chapterToggle(link) {
-  updateVisibleChapter(link);
-  updateCurrentNav(link);
   updateLogoBarTitle(link);
+  if (window.innerWidth > 800) {
+    updateVisibleChapter(link);
+    updateCurrentNav(link);
+  }
 }
 
 //Event-Listeners Chapters
 window.onload = (event) => {
   chapterToggle(firstLink);
 };
+window.onresize = (event) => {
+  allChaptersVisAllNavCurrent(chapterArr);
+  chapterToggle(firstLink);
+};
+
 const linkListeners = linkArr.map((link) => {
   link.addEventListener("click", () => {
     chapterToggle(link);
