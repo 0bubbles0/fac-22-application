@@ -3,6 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 :root {
+  --bground-color:#f4f1de;
+  --top-color:#e07a5f;
+  --nav-color:#f2cc8f;
+  --card-color:#f2cc8f;
+  --logo-color:	#004f70;
+  --font-color: black;
+  --accent-color: #004f70;
+  /*
   --bground-color:#cef6ff;
   --top-color:#ffb703;
   --nav-color:#f9f871;
@@ -10,6 +18,7 @@
   --logo-color:	#004f70;
   --font-color: black;
   --accent-color: purple;
+  */
 }
 
 * {box-sizing: border-box;
@@ -35,7 +44,7 @@ body {
   grid-template-areas:
   "header header"
   "nav main"
-  "nav footer";
+  "footer footer";
 }
 
 
@@ -136,6 +145,13 @@ h1, h2, h3, h6 {
   color: var(--side-color);
   */
 }
+.logo-bar-title {
+  color: var(--bground-color);
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
 .p-bold {
   font-weight: bold;
   color: var(--accent-color);
@@ -147,7 +163,7 @@ ul {
 }
 .button{
   background-color: var(--logo-color);
-  color: var(--top-color);
+  color: var(--bground-color);
   border: none;
   border-radius: 20px;
   padding: 1.5vh 1.5vw;
@@ -313,7 +329,7 @@ ul {
 
 /*Hover, links*/
 .nav-link, .nav-link:visited, a, a:visited { color: var(--logo-color);}
-.nav-link:hover {background-color: var(--bground-color);}
+.nav-link:hover, .nav-link-focus {background-color: var(--bground-color);}
 .hover:hover, button:hover, .fcc-tile:hover, .fac-tile:hover {opacity: 0.8; cursor: pointer;}
 
 

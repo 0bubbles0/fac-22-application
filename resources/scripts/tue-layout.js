@@ -4,6 +4,81 @@ let myHeading = document.querySelector("h1");
 myHeading.textContent = "Barbara's page";
 */
 
+
+//CHAPTERS
+let logoBarTitle = document.getElementById("logo-bar-title");
+const linkArr = Array.from(document.getElementsByClassName("nav-link"));
+const firstLink = linkArr[0];
+const chapterArr = Array.from(document.getElementsByTagName("section"));
+const chapterHeadingsArr = Array.from(document.getElementsByClassName("ch-hd"));
+
+function newChapterVisibility(arr, visindex) {
+  arr.forEach((element, index) => {
+    if (index === visindex) {
+      element.classList.remove("tile-hidden");
+    } else {
+      element.classList.add("tile-hidden");
+    }
+  })
+}
+
+function newNavFocus(arr, visindex) {
+  arr.forEach((element, index) => {
+    if (index === visindex) {
+      element.classList.add("nav-link-focus");
+    } else {
+      element.classList.remove("nav-link-focus");
+    }
+  })
+}
+
+function knowChapterIndex(link) {
+  return linkArr.indexOf(link);
+}
+/*
+function getChapterHTML(link) {
+  let x = knowChapterIndex(link);
+  return chapterArr[x];
+}
+function knowChapterId(link) {
+  let x = getChapterHTML(link);
+  return x.id;
+}
+*/
+
+function updateVisibleChapter(link) {
+  let x = knowChapterIndex(link);
+  return newChapterVisibility(chapterArr, x);
+}
+
+function updateCurrentNav(link) {
+  let x = knowChapterIndex(link);
+  return newNavFocus(linkArr, x);
+}
+
+function updateLogoBarTitle(link) {
+  let x = knowChapterIndex(link);
+  let y = chapterHeadingsArr[x].innerHTML;
+  return logoBarTitle.innerHTML = y;
+}
+
+function chapterToggle(link) {
+  updateVisibleChapter(link);
+  updateCurrentNav(link);
+  updateLogoBarTitle(link);
+}
+
+//Event-Listeners Chapters
+window.onload = (event) => {
+  chapterToggle(firstLink);
+};
+const linkListeners = linkArr.map((link) => {
+  link.addEventListener("click", () => {
+    chapterToggle(link);
+  });
+});
+
+
 //CAROUSELS
 
 //Functions

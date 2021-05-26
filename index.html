@@ -21,7 +21,7 @@
   <!--Logo-bar-->
   <header class="logo-bar">
     <img class="logo-img" src="resources/img/logo/logo1-250-100.png">
-    <h3 id="logo-bar-title" class="logo-bar-title">Title</h3>
+    <p id="logo-bar-title" class="logo-bar-title"></p>
     <!-- 
     <div class="profile-icons"></div>
     -->
@@ -31,22 +31,23 @@
   <!--Nav-bar-->
   <aside class="nav-bar">
     <nav class="nav-flex">
-      <a class="nav-link no-mobile" href="#c-welcome"><img class="bubble-list"
+      <a class="nav-link no-mobile" id="nav-l-welcome" href="#c-welcome"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Welcome</a>
-      <a class="nav-link no-mobile" href="#c-intro"><img class="bubble-list"
+      <a class="nav-link no-mobile" id="nav-l-intro" href="#c-intro"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Background</a>
-      <a class="nav-link no-mobile" href="#c-values"><img class="bubble-list"
+      <a class="nav-link no-mobile" id="nav-l-values" href="#c-values"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Values</a>
-      <a class="nav-link no-mobile" href="#c-ideas"><img class="bubble-list"
+      <a class="nav-link no-mobile" id="nav-l-ideas" href="#c-ideas"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Ideas</a>
-      <a class="nav-link no-mobile" href="#c-projects"><img class="bubble-list"
+      <a class="nav-link no-mobile" id="nav-l-projects" href="#c-projects"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Projects</a>
-      <a class="nav-link no-mobile" href="#c-music"><img class="bubble-list"
+      <a class="nav-link no-mobile" id="nav-l-music" href="#c-music"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">BeetBoot</a>
-      <a class="nav-link no-mobile" href="#c-goals"><img class="bubble-list"
+      <a class="nav-link no-mobile" id="nav-l-goals" href="#c-goals"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Coding Goals</a>
-      <a class="nav-link" href="#c-fac-appl"><img class="bubble-list" src="resources/img/logo/bubble-mini.png">fac</a>
-      <a class="nav-link" href="#c-profiles"><img class="bubble-list"
+      <a class="nav-link" id="nav-l-fac" href="#c-fac-appl"><img class="bubble-list"
+          src="resources/img/logo/bubble-mini.png">fac</a>
+      <a class="nav-link" id="nav-l-profiles" href="#c-profiles"><img class="bubble-list"
           src="resources/img/logo/bubble-mini.png">Profiles</a>
     </nav>
   </aside>
@@ -54,11 +55,11 @@
   <main class="page-content">
     <!--Welcome-->
     <section id="c-welcome" class="chapter-creative">
-      <h1 id="welc-h1">Welcome!</h1>
+      <h1 id="welc-h1" class="ch-hd">Welcome!</h1>
       <h2 id="welc-h2-name">My name is <span class="p-bold p-bold-key">Barbara</span> (she/her)</h2>
       <p id="welc-hobbies">Some of my favourite <span class="p-bold">activities</span> are playing the violin,
-        pub-quizzes and knitting (also: making lists).</p>
-      <p id="welc-dev">Currently, I am working on becoming a <span class="p-bold p-bold-key">Web Developer</span>.</p>
+        pub-quizzes and knitting (also: making lists)</p>
+      <p id="welc-dev">Currently, I am working on becoming a <span class="p-bold p-bold-key">Web Developer</span></p>
       <img id="welc-img-violin" class="creative-img" src="resources/img/deco/violin-1.jpg" alt="violin">
       <img id="welc-img-yarn" class="creative-img no-mobile" src="resources/img/deco/yes-yarn-balls-21-02-22.jpg"
         alt="yarn">
@@ -68,7 +69,7 @@
 
     <!--Background-->
     <section id="c-intro" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Background</h3>
+      <h3 class="chapter-stack-heading ch-hd">Background</h3>
       <div class="chapter-stack-column">
         <h4>During the studies for my <span class="p-bold p-bold-key">BSc Economics at SOAS, University of London
           </span>
@@ -110,7 +111,7 @@
 
     <!--Values-->
     <section id="c-values" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Personal Values</h3>
+      <h3 class="chapter-stack-heading ch-hd">Personal Values</h3>
       <div class="chapter-stack-column">
         <h4>Through improving my <span class="p-bold">coding skills</span>, I hope to:</h4>
         <ul>
@@ -151,7 +152,7 @@
 
     <!--Ideas-->
     <section id="c-ideas" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Ideas</h3>
+      <h3 class="chapter-stack-heading ch-hd">Ideas</h3>
       <div class="chapter-stack-column column-low">
         <h4>If I could learn the coding skills to <span class="p-bold">solve 4 life problems</span> through apps...
         </h4>
@@ -215,7 +216,7 @@
 
     <!--Projects-->
     <section id="c-projects" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Completed Projects</h3>
+      <h3 class="chapter-stack-heading ch-hd">Completed Projects</h3>
       <div class="chapter-stack-column carousel-grid">
         <h4 class="carousel-head"><span class="p-bold">HTML & CSS</span></h4>
         <h5 class="carousel-subhead">FreeCodeCamp "Responsive Web Design"</h5>
@@ -304,9 +305,10 @@
         <button class="button-car button-car-next" id="button-next-fac">&#9654;</button>
       </div>
     </section>
+
     <!--Beethoven-->
     <section id="c-music" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Beethoven Bootcamp</h3>
+      <h3 class="chapter-stack-heading ch-hd">Beethoven Bootcamp</h3>
       <div class="chapter-stack-column column-low">
         <p id="music-p">Covid-19 has been a lonely time for passionate amateur orchestra players (especially us
           thriving
@@ -344,7 +346,7 @@
 
     <!--Coding Goals-->
     <section id="c-goals" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Coding Goals</h3>
+      <h3 class="chapter-stack-heading ch-hd">Coding Goals</h3>
       <div class="chapter-stack-column">
         <h4>What I hope to work on next</h4>
         <h4><span class="p-bold">Improve</span> on:</h4>
@@ -388,7 +390,7 @@
 
     <!--fac-->
     <section id="c-fac-appl" class="chapter-stack">
-      <h3 class="chapter-stack-heading">Why Founders and Coders</h3>
+      <h3 class="chapter-stack-heading ch-hd">Why Founders and Coders</h3>
       <div class="chapter-stack-column column-tall">
         <h4>The Structure of the Course and <span class="p-bold">Apprenticeship</span> would provide the invaluable:
         </h4>
@@ -452,7 +454,7 @@
 
     <!--Profiles-->
     <section id="c-profiles" class="chapter-creative">
-      <h3 class="ch-profiles-header">Profiles</h3>
+      <h3 class="ch-profiles-header ch-hd">Profiles</h3>
 
       <h4 class="ch-profiles-intro">Thank you for reading my story and considering my application to the upcoming
         Founders and Coders Cohort 22!<br>You can view my completed course requirements and other coding endeavours
