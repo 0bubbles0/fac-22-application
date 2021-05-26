@@ -112,6 +112,9 @@
   - [ ] Layout, Sizes, Responsiveness
   - [ ] Colours
   - [ ] Functionality
+  - [ ] Accessibility on:
+    - [ ] https://wave.webaim.org/
+    - [ ] https://www.webaccessibility.com/
 - [ ] **Ask:**
   - [ ] Questions, Problems
   - [x] Feedback

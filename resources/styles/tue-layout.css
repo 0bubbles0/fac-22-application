@@ -9,8 +9,9 @@
   --card-color:#f2cc8f;
   --logo-color:	#004f70;
   --font-color: black;
-  --accent-color: #004f70;
+  --accent-color:#e07a5f;
   /*
+  --accent-color: #43aa8b;
   --card-color:#81b29a;
   --bground-color:#cef6ff;
   --top-color:#ffb703;
@@ -151,6 +152,11 @@ h1, h2, h3, h6 {
   font-family: "Courgette", Helvetica, sans-serif;
   font-size: larger;
 }
+h4, h5 {
+  font-size: larger;
+  margin: 0 auto;
+  color: var(--logo-color);
+}
 .logo-bar-title {
   color: var(--bground-color);
   margin: 0;
@@ -243,6 +249,7 @@ ul {
   grid-template: repeat(4, 1fr) / repeat(6, 1fr);
   justify-items: center;
   align-items: center;
+  font-size: larger;
 }
 
 
