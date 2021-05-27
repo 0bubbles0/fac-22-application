@@ -1,30 +1,65 @@
 /*
-let myHeading = document.querySelector("h1");
-
-myHeading.textContent = "Barbara's page";
+Table of Contents:
+- Surprise button
+- Chapter Visibility: Variables, Functions, Event Listeners
+- Carousels: General Functions, Variables, Event Listeners
+- Beethoven Bootcamp: Catalogue-object, Variables, Functions, Event Listeners
 */
 
+//Surprise button
+//const root = document.documentElement;
+const root = document.querySelector(":root");
+const surpriseButton = document.getElementById("button-surprise");
 
-//CHAPTERS
+function changeColors() {
+  let x = getComputedStyle(root);
+  if (x.getPropertyValue('--top-color') == "#e07a5f") {
+    root.style.setProperty('--bground-color', "white");
+    root.style.setProperty('--top-color', "#d1e8e2");
+    root.style.setProperty('--nav-color', "#d1e8e2");
+    root.style.setProperty('--card-color', "lightgreen");
+    root.style.setProperty('--logo-color', "black");
+    root.style.setProperty('--font-color', "black");
+    root.style.setProperty('--accent-color', "red");
+  } else {
+    root.style.setProperty('--bground-color', "#f4f1de");
+    root.style.setProperty('--top-color', "#e07a5f");
+    root.style.setProperty('--nav-color', "#f2cc8f");
+    root.style.setProperty('--card-color', "#f2cc8f");
+    root.style.setProperty('--logo-color', "#004f70");
+    root.style.setProperty('--font-color', "black");
+    root.style.setProperty('--accent-color', "#e07a5f");
+  }
+}
+
+surpriseButton.addEventListener("click", changeColors);
+
+
+
+//CHAPTER Visibility
 let logoBarTitle = document.getElementById("logo-bar-title");
 const linkArr = Array.from(document.getElementsByClassName("nav-link"));
 const firstLink = linkArr[0];
+
 const chapterArr = Array.from(document.getElementsByTagName("section"));
 const chapterHeadingsArr = Array.from(document.getElementsByClassName("ch-hd"));
 
-function newChapterVisibility(arr, visindex) {
-  arr.forEach((element, index) => {
-    if (index === visindex) {
-      element.classList.remove("tile-hidden");
+let currentIndex = 0;
+
+//Functions Visibility
+function updateVisibleChapter(index) {
+  chapterArr.forEach((element, i) => {
+    if (i === index) {
+      element.classList.remove("hidden");
     } else {
-      element.classList.add("tile-hidden");
+      element.classList.add("hidden");
     }
   })
 }
 
-function newNavFocus(arr, visindex) {
-  arr.forEach((element, index) => {
-    if (index === visindex) {
+function updateCurrentNav(index) {
+  linkArr.forEach((element, i) => {
+    if (i === index) {
       element.classList.add("nav-link-focus");
     } else {
       element.classList.remove("nav-link-focus");
@@ -32,70 +67,58 @@ function newNavFocus(arr, visindex) {
   })
 }
 
-function knowChapterIndex(link) {
-  return linkArr.indexOf(link);
-}
-/*
-function getChapterHTML(link) {
-  let x = knowChapterIndex(link);
-  return chapterArr[x];
-}
-function knowChapterId(link) {
-  let x = getChapterHTML(link);
-  return x.id;
-}
-*/
-
-function updateVisibleChapter(link) {
-  let x = knowChapterIndex(link);
-  return newChapterVisibility(chapterArr, x);
-}
-
-function updateCurrentNav(link) {
-  let x = knowChapterIndex(link);
-  return newNavFocus(linkArr, x);
-}
-
-function allChaptersVisAllNavCurrent(arr) {
-  arr.forEach((element, index) => {
-    element.classList.remove("tile-hidden");
-    element.classList.remove("nav-link-focus");
-  });
-}
-
-function updateLogoBarTitle(link) {
-  let x = knowChapterIndex(link);
-  let y = chapterHeadingsArr[x].innerHTML;
+function updateLogoBarTitle(index) {
+  let y = chapterHeadingsArr[index].innerHTML;
   return logoBarTitle.innerHTML = y;
 }
 
-function chapterToggle(link) {
-  updateLogoBarTitle(link);
-  if (window.innerWidth > 800) {
-    updateVisibleChapter(link);
-    updateCurrentNav(link);
+function onlyThisChapVis(index) {
+  updateVisibleChapter(index);
+  updateCurrentNav(index);
+  return updateLogoBarTitle(index);
+}
+
+function mainlyThisChapVis(index) {
+  chapterArr.forEach((element) => {
+    element.classList.remove("hidden");
+  });
+  linkArr.forEach((element) => {
+    element.classList.remove("nav-link-focus");
+  });
+  // scroll to this Chapter;
+  return chapterArr[index].scrollIntoView(true);
+}
+
+function decideChapVis(index) {
+  if (window.innerWidth > 600) {
+    onlyThisChapVis(index);
+  } else {
+    mainlyThisChapVis(index);
   }
 }
 
-//Event-Listeners Chapters
-window.onload = (event) => {
-  chapterToggle(firstLink);
-};
-window.onresize = (event) => {
-  allChaptersVisAllNavCurrent(chapterArr);
-  chapterToggle(firstLink);
-};
+/*Event Listeners Visibility*/
 
-const linkListeners = linkArr.map((link) => {
-  link.addEventListener("click", () => {
-    chapterToggle(link);
+window.addEventListener("load", () => {
+  currentIndex = 0;
+  decideChapVis(currentIndex);
+});
+
+window.addEventListener("resize", () => {
+  decideChapVis(currentIndex);
+});
+
+linkArr.map((item) => {
+  item.addEventListener("click", () => {
+    currentIndex = linkArr.indexOf(item);
+    decideChapVis(currentIndex);
   });
 });
 
 
 //CAROUSELS
 
-//Functions
+//General Functions Visibility
 //new visibility
 function newVisibility(arr, visindex) {
   arr.forEach((element, index) => {
@@ -131,7 +154,7 @@ function nextFn(arr, visindex) {
 }
 
 
-//Variables
+//Variables Carousels
 //Ideas Carousel
 const ideasImages = Array.from(document.getElementsByClassName("idea-tile"));
 const ideasBackButton = document.querySelector("#button-back-ideas");
@@ -153,7 +176,7 @@ const facNextButton = document.querySelector("#button-next-fac");
 let facVisibleIndex = 0;
 
 
-//Event Listeners
+//Event Listeners Carousels
 ideasBackButton.addEventListener("click", () => {
   ideasVisibleIndex = backFn(ideasImages, ideasVisibleIndex);
 });
@@ -179,7 +202,7 @@ facNextButton.addEventListener("click", () => {
 
 
 
-//BEETHOVEN: Sharps are +, Flats are -.
+//BEETHOVEN: Catalogue-object: Sharps are +, Flats are -.
 const catalogueBeethovenSym = {
   "Symphony 1": {
     "1": [0],
@@ -264,14 +287,14 @@ const catalogueBeethovenSym = {
   }
 }
 
-//Variables
+//Variables Beethoven
 const dropBeet = document.getElementById("beethoven-choices");
 const buttonBeet = document.getElementById("beethoven-button");
 const displayFieldBeet = document.getElementById("beethoven-result-display");
 
 //Because "key" is a concept in either a JavaScript-object or a music-piece, I'll use "Vorz" for the music-context (abbreviation of German "Vorzeichen", i.e. number of accidentals).
 
-//Beethoven Functions
+//Functions Beethoven
 function knowChosenVorz() {
   return parseInt(dropBeet.value);
 }
@@ -311,6 +334,7 @@ function returnMatches(ctlg, choice) {
   return displayFieldBeet.innerHTML = allMatches;
 }
 
+/*Event Listeners Beethoven*/
 dropBeet.addEventListener("change", () => {
   returnMatches(catalogueBeethovenSym, knowChosenVorz());
 });
