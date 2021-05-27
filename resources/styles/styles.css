@@ -234,7 +234,7 @@ h4, h5 {
 .project-tile-img {
   width: 90%;
   height: 75%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /*Beethoven*/
@@ -356,9 +356,9 @@ i { padding-right: 10px;}
     "fcc fcc prh prh pen pen"
     "wars wars . . repl repl";
   }
-  .project-name { margin: none;}
+  .project-name { margin: 0; font-size: 0.9rem;}
   .button-car {font-size: large;}
-  .project-tile, .project-name {
+  .project-tile {
     font-size: smaller;
   }
 }
@@ -380,6 +380,7 @@ i { padding-right: 10px;}
     justify-self: center;
     margin-bottom: 0;
   }
+  .carousel-mobile {font-size: 1.1rem;}
   .chapter-creative {
     grid-template: repeat(5, auto) / repeat(2, 1fr);
     margin: auto 2vw;
