@@ -26,7 +26,7 @@
 
 ### Tools
 
-* VS Code, Git, GitHub
+* VS Code, Git, GitHub, Browser Developer Tools (Inspector for CSS code, layout information, Console for JavaScript tests, log information)
 * Practice: Codepen, Replit
 * Logo: Figma
 * Colour: colorzilla.com (gradient generator), visme.co, stormwall, Coolors, Colour Lovers, Color Hunt, Colour Code, Colrd
@@ -42,7 +42,7 @@
 * Google Grasshopper App: JavaScript
 * Workshops with Skillcrush, Girl Develop It, Outco: Python Taster, Design, GitHub
 * YouTube, especially Codú, Faraday, Code with Mosh, Thu Nghiem, Dev Ed, Layout Land
-* MDN Docs, w3schools, Codecademy
+* MDN Docs, w3schools, Codecademy, Stackoverflow
 * CSS: css-tricks.com, medium.com, codeburst.io, flexbox.webflow.com, gridbyexample.com, <https://cssgridgarden.com/>, <https://flexboxfroggy.com/>
 
 ## To-do List
