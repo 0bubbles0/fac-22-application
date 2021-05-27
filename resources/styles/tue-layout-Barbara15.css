@@ -76,8 +76,10 @@ body {
   */
   background: linear-gradient(to right, var(--nav-color) 0%, var(--nav-color) 98%, rgba(0,0,0,0.2) 100%);
   grid-area: nav;
+  
 }
 .nav-flex {
+  /*FLEXBOX*/
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -132,13 +134,16 @@ body {
 .column-long {
   min-height: 80vh;
 }
+.column-thin {
+  justify-self: center;
+}
 .chapter-stack-heading {
   display: none;
 }
 
 
 /*Design general*/
-h1, h2, h3, h6 {
+h2, h6 {
   font-family: "Courgette", Helvetica, sans-serif;
   font-size: larger;
 }
@@ -147,15 +152,12 @@ h4, h5 {
   margin: 0 auto;
   color: var(--logo-color);
 }
-.logo-bar-title {
-  color: var(--bground-color);
+.ch-hd, #logo-bar-title {
+  color: var(--logo-color);
   margin: 0;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.8rem;
-}
-.ch-hd {
-  color: var(--top-color);
 }
 .p-bold {
   font-weight: bold;
@@ -179,12 +181,10 @@ ul {
 }
 
 .button-car {
+  font-size:xx-large;
   color: var(--logo-color);
   background: none;
   border: none;
-}
-.project-tile {
-  font-size:smaller;
 }
 
 /*Carousels*/
@@ -223,12 +223,17 @@ ul {
   height: 75%;
   object-fit: cover;
 }
+.select-field {
+  margin: 5vh 5vw;
+  color: var(--logo-color);
+  background-color: var(--card-color);
+  font-size: x-large;
+}
+
 #beethoven-result-display {
   height: 50vh;
   padding: 2vh 4vw;
 }
-/*
-*/
 
 
 /*Creative Sections*/
@@ -264,14 +269,15 @@ ul {
 }
 
 /*Profiles Section*/
+i { padding-right: 0.5rem;}
 .ch-profiles-header {grid-area: prh;}
 .ch-profiles-intro {grid-area: prin; justify-self: left;}
-.ch-profiles-a {grid-area: ghub;}
-.ch-profiles-b {grid-area: repo;}
-.ch-profiles-c {grid-area: fcc;}
-.ch-profiles-d {grid-area: wars;}
-.ch-profiles-e {grid-area: pen;}
-.ch-profiles-f {grid-area: repl;}
+#link-github {grid-area: ghub;}
+#link-github-repo {grid-area: repo;}
+#link-fcc {grid-area: fcc;}
+#link-codewars {grid-area: wars;}
+#link-codepen {grid-area: pen;}
+#link-repl {grid-area: repl;}
 
 #c-profiles {
   margin: auto 2vw;
@@ -282,6 +288,7 @@ ul {
   ". fcc prh prh repl ."
   ". . wars pen . .";
 }
+
 
 /*
 .chapter-creative {
@@ -346,6 +353,13 @@ ul {
   border-color: rgba(0,0,0,0.2);
   background: linear-gradient(to right, var(--bground-color) 0%, var(--bground-color) 98%, rgba(0,0,0,0.2) 100%)
 }
+.ch-profiles {
+  background-color:var(--card-color);
+  border-radius: 10px;
+  padding: 2px;
+}
+/*
+*/
 .hover:hover, button:hover, .fcc-tile:hover, .fac-tile:hover {opacity: 0.8; cursor: pointer;}
 
 
@@ -361,18 +375,36 @@ ul {
   }
   .nav-bar {
     background: linear-gradient(to bottom, var(--nav-color) 0%, var(--nav-color) 98%, rgba(0,0,0,0.2) 100%);
+    
   }
   .nav-flex {
-    flex-direction: row;
+    /*Flexbox*/
+    flex-flow: row wrap;
     justify-content: space-evenly;
   }
   .nav-link {
     padding: 0.5em;
     border-bottom: none;
   }
+  .nav-link:hover, .nav-link-focus {
+    background: var(--bground-color);
+  }
+  #welc-h2-name {grid-area: 2 / 1 / span 1 / span 6;}
+  #welc-img-violin {grid-area: 1/ 1 / span 1 / span 2;}
+  #welc-img-yarn {display: none;}
+  #welc-img-bubble-corner {grid-area: 3 / 6 / span 2 / span 1;}
+  #c-profiles {
+    grid-template-areas:
+    "prin prin prin prin prin prin"
+    "repo repo . . ghub ghub"
+    "fcc fcc prh prh pen pen"
+    "wars wars . . repl repl";
+  }
 }
-
+/*
 @media only screen and (max-width: 800px) {
+*/
+@media only screen and (max-width: 600px) {
   body {
     width: 100vw;
     margin: auto 2vw;
@@ -380,7 +412,14 @@ ul {
   .no-mobile {
     display: none;
   }
- 
+  #logo-bar-title {
+    display:none;
+  }
+  .chapter-stack-heading {
+    display: block;
+    justify-self: center;
+    margin-bottom: 0;
+  }
   .chapter-creative {
     grid-template: repeat(5, auto) / repeat(2, 1fr);
     margin: auto 2vw;
@@ -402,15 +441,6 @@ ul {
     "wars repl";
   }
   .ch-profiles-header { justify-self: center; margin: 0 auto;}
-}
-
-@media only screen and (max-width: 600px) {
-  #logo-bar-title {display:none;}
-  .chapter-stack-heading {
-    display: block;
-    justify-self: center;
-    margin-bottom: 0;
-  }
 }
 
 /*Priority*/
