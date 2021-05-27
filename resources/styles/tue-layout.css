@@ -155,7 +155,10 @@ h4, h5 {
 .ch-hd, #logo-bar-title {
   color: var(--logo-color);
   margin: 0;
+  font-family: "Courgette", Helvetica, sans-serif;
+  /*
   text-transform: uppercase;
+  */
   font-weight: bold;
   font-size: 1.8rem;
 }
@@ -186,9 +189,16 @@ ul {
   background: none;
   border: none;
 }
+.ch-profiles, .ch-hd {
+  background-color: var(--top-color);
+  border-radius: 10px;
+  padding: 5px;
+}
+/*
 .project-tile {
   font-size:smaller;
 }
+*/
 
 /*Carousels*/
 .carousel-grid {
@@ -272,14 +282,16 @@ ul {
 }
 
 /*Profiles Section*/
+i { padding-right: 10px;}
+
 .ch-profiles-header {grid-area: prh;}
 .ch-profiles-intro {grid-area: prin; justify-self: left;}
-.ch-profiles-a {grid-area: ghub;}
-.ch-profiles-b {grid-area: repo;}
-.ch-profiles-c {grid-area: fcc;}
-.ch-profiles-d {grid-area: wars;}
-.ch-profiles-e {grid-area: pen;}
-.ch-profiles-f {grid-area: repl;}
+#link-github {grid-area: ghub;}
+#link-github-repo {grid-area: repo;}
+#link-fcc {grid-area: fcc;}
+#link-codewars {grid-area: wars;}
+#link-codepen {grid-area: pen;}
+#link-repl {grid-area: repl;}
 
 #c-profiles {
   margin: auto 2vw;
@@ -354,7 +366,7 @@ ul {
   border-color: rgba(0,0,0,0.2);
   background: linear-gradient(to right, var(--bground-color) 0%, var(--bground-color) 98%, rgba(0,0,0,0.2) 100%)
 }
-.hover:hover, button:hover, .fcc-tile:hover, .fac-tile:hover {opacity: 0.8; cursor: pointer;}
+.hover:hover, button:hover, .fcc-tile:hover, .fac-tile:hover, .ch-profiles:hover {opacity: 0.8; cursor: pointer;}
 
 
 /*Media Queries*/
@@ -393,6 +405,9 @@ ul {
     "repo repo . . ghub ghub"
     "fcc fcc prh prh pen pen"
     "wars wars . . repl repl";
+  }
+  .project-tile, .button-car, .project-name {
+    font-size: smaller;
   }
 }
 /*
