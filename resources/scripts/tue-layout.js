@@ -1,9 +1,39 @@
 /*
 Table of Contents:
+- Surprise button
 - Chapter Visibility: Variables, Functions, Event Listeners
 - Carousels: General Functions, Variables, Event Listeners
 - Beethoven Bootcamp: Catalogue-object, Variables, Functions, Event Listeners
 */
+
+//Surprise button
+//const root = document.documentElement;
+const root = document.querySelector(":root");
+const surpriseButton = document.getElementById("button-surprise");
+
+function changeColors() {
+  let x = getComputedStyle(root);
+  if (x.getPropertyValue('--top-color') == "#e07a5f") {
+    root.style.setProperty('--bground-color', "white");
+    root.style.setProperty('--top-color', "#d1e8e2");
+    root.style.setProperty('--nav-color', "#d1e8e2");
+    root.style.setProperty('--card-color', "lightgreen");
+    root.style.setProperty('--logo-color', "black");
+    root.style.setProperty('--font-color', "black");
+    root.style.setProperty('--accent-color', "red");
+  } else {
+    root.style.setProperty('--bground-color', "#f4f1de");
+    root.style.setProperty('--top-color', "#e07a5f");
+    root.style.setProperty('--nav-color', "#f2cc8f");
+    root.style.setProperty('--card-color', "#f2cc8f");
+    root.style.setProperty('--logo-color', "#004f70");
+    root.style.setProperty('--font-color', "black");
+    root.style.setProperty('--accent-color', "#e07a5f");
+  }
+}
+
+surpriseButton.addEventListener("click", changeColors);
+
 
 
 //CHAPTER Visibility
@@ -14,7 +44,7 @@ const firstLink = linkArr[0];
 const chapterArr = Array.from(document.getElementsByTagName("section"));
 const chapterHeadingsArr = Array.from(document.getElementsByClassName("ch-hd"));
 
-var currentIndex = 0;
+let currentIndex = 0;
 
 //Functions Visibility
 function updateVisibleChapter(index) {

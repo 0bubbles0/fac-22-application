@@ -50,31 +50,27 @@
 ### Final Tasks
 
 1. General
-  - [ ] iPad mode &rarr; get rid?
-  - [ ] mobile mode &rarr; 
-    - [ ] hide Surprise button
-    - [ ] still show heading in top-bar &rarr; recognise current section on viewport?
-    - [ ] font sizes
+  - [x] iPad mode &rarr; get rid?
+  - [x] mobile mode &rarr; 
     - [ ] Colors: bold, test on Phone
-  - [ ] Surprise button: animate yarn, change CSS-colour-variables?, display bubble-background?
+  - [x] Surprise button: animate yarn, change CSS-colour-variables?, display bubble-background?
   - [ ] Validate HTML
 1. Welcome
-  - [ ] Yarn: animate 
 1. Background
 1. Values
   - [ ] low left column
 1. Ideas
   - [ ] h6-color, card padding
 1. Projects
-  - [ ] &larr; &rarr; size
+  - [x] &larr; &rarr; size
 1. Beethoven Bootcamp
-  - [ ] Select-field: size, style
-  - [ ] Headings: margin-top
+  - [x] Select-field: size, style
+  - [x] Headings: margin-top
 1. Coding Goals
-  - [ ] Center children &rarr; space-around?
+  - [x] Center children &rarr; space-around?
 1. Founders & Coders
 1. Profiles
-  - [ ] postitions of items
+  - [x] postitions of items
   - [ ] icon: fix Codewars
 
 ### Prep
@@ -98,7 +94,7 @@
   - [x] Links
   - [x] FIX eventListener
 - [ ] ? Baking measurements Converter (cups vs grams)
-- [ ] **Surprise button**
+- [x] **Surprise button**
 - [x] Recognise "current" chapter --> Heading in top-bar, highlight nav, active/hidden class
 
 #### Media
@@ -139,20 +135,20 @@
     - [x] Alignment, gaps
     - [x] **Sizes**
     - [x] **Style DOM-Placeholder**
-    - [ ] Responsive?
+    - [x] Responsive?
       - [x] **element-heights on small devices**
     - [ ] Tidy up
-  - [ ] *Design:*
-    - [ ] Font families, sizes
-    - [ ] Special text, span
-    - [ ] Colours: palettes, relative
+  - [x] *Design:*
+    - [x] Font families, sizes
+    - [x] Special text, span
+    - [x] Colours: palettes, relative
     - [ ] Tidy up
 - [ ] **JavaScript**
   - [x] Set up object: Symphony-No, Movement-No, Key-signature, imslp-link
   - [x] js variables, functions
   - [x] Access HTML-elements: **select-box**
   - [x] **DOM Events, Listener**
-  - [ ] Surprise-button
+  - [x] Surprise-button
   - [x] Section-heading in logo-bar?
 
 ### Programs
@@ -164,14 +160,14 @@
 
 - [ ] **Myself**, other devices, other browsers
   - [x] Privacy settings
-  - [ ] Layout, Sizes, Responsiveness
+  - [x] Layout, Sizes, Responsiveness
   - [ ] Colours
-  - [ ] Functionality
-  - [ ] Accessibility on:
-    - [ ] <https://wave.webaim.org/>
-    - [ ] <https://www.webaccessibility.com/>
-- [ ] **Ask:**
-  - [ ] Questions, Problems
+  - [x] Functionality
+  - [x] Accessibility on:
+    - [x] <https://wave.webaim.org/>
+    - [x] <https://www.webaccessibility.com/>
+- [x] **Ask:**
+  - [x] Questions, Problems
   - [x] Feedback
-  - [ ] Does Hosting work?
+  - [x] Does Hosting work?
 
